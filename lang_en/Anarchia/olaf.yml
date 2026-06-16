@@ -1,0 +1,55 @@
+id: 'olaf'
+settings:
+  chance: 1.0
+  cooldown: 25
+  visual: true
+  cooldownmessage: true
+  block-in-region: true
+item:
+  material: SNOWBALL
+  name: '&b&lOlaf'
+  lore:
+    - '&8» &7Item from the &fChristmas event 2025&7!'
+    - ''
+    - '&8» &7Hitting an opponent summons'
+    - '&8» &bthe snowman Olaf&7, who &cblocks their view&7!'
+  model-data: 10103
+  usage: 3
+  unbreakable: true
+  glow: true
+  attributes:
+    - type: GENERIC_ATTACK_DAMAGE
+      amount: 1.0
+      slot: HAND
+  enchants:
+    unbreaking: 1
+sound:
+  enabled: true
+  type: 'ENTITY_SNOW_GOLEM_AMBIENT'
+particles:
+  enabled: true
+  type: 'SNOWFLAKE'
+titles:
+  damager:
+    enabled: true
+    title: ""
+    subtitle: "<gray>You threw <aqua>Olaf's<gray> egg!"
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+  victim:
+    enabled: false
+    title: ""
+    subtitle: ""
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+abilities:
+  'HIT_ENTITY':
+    action:
+      - type: SUMMON_BLOCKER
+        mob: SNOWMAN
+        duration: 6
+        blocker-material: PACKED_ICE
+        display-name: "<white>Olaf"
+        show-name: true

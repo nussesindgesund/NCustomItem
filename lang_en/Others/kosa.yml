@@ -1,0 +1,68 @@
+id: 'kosa'
+settings:
+  chance: 1.0
+  cooldown: 60
+  visual: true
+  cooldownmessage: true
+  block-in-region: true
+item:
+  material: IRON_HOE
+  name: '&8&lScythe'
+  lore:
+    - ''
+    - '&8» &7This is an item from:'
+    - '&8» &fthe halloween event (2023)'
+    - ''
+    - '&8» &7Your hit can &fonce a minute'
+    - '&8» &7scare your opponent, applying'
+    - '&8» &7effects that impair their vision'
+    - ''
+  model-data: 10135
+  usage: -1
+  unbreakable: true
+  glow: true
+  attributes:
+    - type: GENERIC_ATTACK_DAMAGE
+      amount: 1.0
+      slot: HAND
+  enchants:
+    unbreaking: 1
+sound:
+  enabled: true
+  type: 'ENTITY_GHAST_SCREAM'
+particles:
+  enabled: true
+  type: 'SPELL_MOB'
+titles:
+  damager:
+    enabled: true
+    title: ""
+    subtitle: "<white>You blinded the player"
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+  victim:
+    enabled: true
+    title: "<dark_gray><bold>Blindness"
+    subtitle: "<white>You are blinded for <#03c2fc>5 sec!"
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+abilities:
+  'HIT_ENTITY':
+    action:
+      - type: EFFECT
+        target: VICTIM
+        effects:
+          - potion: BLINDNESS
+            amplifier: 0
+            duration: 8
+          - potion: NAUSEA
+            amplifier: 0
+            duration: 12
+          - potion: DARKNESS
+            amplifier: 0
+            duration: 10
+          - potion: SLOWNESS
+            amplifier: 2
+            duration: 4

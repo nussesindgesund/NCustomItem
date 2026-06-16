@@ -1,0 +1,62 @@
+id: 'rozgrzana_kukurydza'
+settings:
+  chance: 1.0
+  cooldown: 15
+  visual: true
+  cooldownmessage: true
+  block-in-region: true
+item:
+  material: BLAZE_ROD
+  name: '&a&lOvercooked Corn'
+  lore:
+    - '&8» &7This is an item obtained from'
+    - '&8» &fthe summer event 2024&7!'
+    - ''
+    - '&8» &7Fires a magic projectile,'
+    - '&8» &7which destroys armor and deals'
+    - '&8» &7damage at the point of impact.'
+    - ''
+  model-data: 0
+  usage: -1
+  unbreakable: true
+  glow: true
+  attributes:
+    - type: GENERIC_ATTACK_DAMAGE
+      amount: 1.0
+      slot: HAND
+  enchants:
+    unbreaking: 1
+sound:
+  enabled: true
+  type: 'ENTITY_BLAZE_SHOOT'
+particles:
+  enabled: true
+  type: 'FLAME'
+titles:
+  damager:
+    enabled: true
+    title: "<dark_green><bold>Hot Corn"
+    subtitle: "<green>Fired a piping-hot <dark_green>cob!"
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+  victim:
+    enabled: false
+    title: ""
+    subtitle: ""
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+abilities:
+  'RIGHT_CLICK_ARROW':
+    settings:
+      projectile: SNOWBALL
+      speed: 2.0
+      require-player-hit: true
+    action:
+      - type: DAMAGE_ARMOR
+        target: VICTIM
+        percent: 50.0
+      - type: DAMAGE
+        target: VICTIM
+        amount: 6.0

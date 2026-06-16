@@ -1,0 +1,50 @@
+id: 'kusza_przyciagajaca'
+settings:
+  chance: 1.0
+  cooldown: 3
+  visual: true
+  cooldownmessage: true
+  block-in-region: true
+item:
+  material: CROSSBOW
+  name: "<#55FFFF><bold>ᴘᴜʟʟɪɴɢ ᴄʀᴏꜱꜱʙᴏᴡ</bold>"
+  lore:
+    - ' <#444444>· <#CCCCCC>The crossbow reloads <#FFFFFF>automatically<#CCCCCC>.'
+    - ' <#444444>· <#CCCCCC>A hit <#55FFFF>teleports <#CCCCCC>the target directly to you.'
+    - ' <#444444>· <#777777>ᴜꜱᴀɢᴇ <#444444>· <#CCCCCC>Fire with <#FFFFFF>RMB<#CCCCCC> to use.'
+  model-data: 10007
+  usage: -1
+  unbreakable: true
+  glow: true
+  attributes:
+    - type: GENERIC_ATTACK_DAMAGE
+      amount: 1.0
+      slot: HAND
+  enchants:
+    unbreaking: 1
+sound:
+  enabled: true
+  type: 'ITEM_CROSSBOW_SHOOT'
+titles:
+  damager:
+    enabled: true
+    title: "<#55FFFF><bold>ᴘᴜʟʟ</bold>"
+    subtitle: "<#444444>· <#AAAAAA>The target has been pulled to you <#444444>·"
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+  victim:
+    enabled: true
+    title: "<#FF5555><bold>ᴄᴀᴜɢʜᴛ</bold>"
+    subtitle: "<#444444>· <#AAAAAA>You were pulled in by a crossbow <#444444>·"
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+abilities:
+  'RIGHT_CLICK_ARROW':
+    settings:
+      projectile: ARROW
+      speed: 3.0
+      auto-load: true
+    action:
+      - type: TELEPORT_TO_ATTACKER

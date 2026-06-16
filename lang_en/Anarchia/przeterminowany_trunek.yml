@@ -1,0 +1,75 @@
+id: 'przeterminowany_trunek'
+settings:
+  chance: 1.0
+  cooldown: 120
+  visual: true
+  cooldownmessage: true
+  block-in-region: true
+item:
+  material: SPLASH_POTION
+  name: '&2&lExpired Brew'
+  lore:
+    - '&8» &7This is an item obtained during:'
+    - '&8» &fthe pirate event 2025&7!'
+    - ''
+    - '&8» &7When thrown to the ground, it releases a &emist&7, which'
+    - '&8» &7applies &apoison &7and &fslowness'
+    - '&8» &7to nearby players for &cseveral dozen &7seconds.'
+  model-data: 10147
+  usage: 1
+  unbreakable: true
+  glow: true
+  attributes:
+    - type: GENERIC_ATTACK_DAMAGE
+      amount: 1.0
+      slot: HAND
+  enchants:
+    unbreaking: 1
+sound:
+  enabled: true
+  type: 'ENTITY_SPLASH_POTION_BREAK'
+particles:
+  enabled: true
+  type: 'SPELL_WITCH'
+titles:
+  damager:
+    enabled: true
+    title: "<dark_green><bold>Brew"
+    subtitle: "<green>Threw an expired <dark_green>brew!"
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+  victim:
+    enabled: false
+    title: ""
+    subtitle: ""
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+abilities:
+  'RIGHT_CLICK_REGION':
+    settings:
+      radius: 4.0
+    action:
+      - type: EFFECT
+        target: VICTIM
+        effects:
+          - potion: POISON
+            amplifier: 1
+            duration: 5
+          - potion: SLOWNESS
+            amplifier: 1
+            duration: 5
+      - type: AREA_EFFECT_CLOUD
+        radius: 4.0
+        duration: 25
+        reapply-delay: 20
+        color: '#5C1A5C'
+        particle: SPELL_WITCH
+        effects:
+          - potion: POISON
+            amplifier: 1
+            duration: 5
+          - potion: SLOWNESS
+            amplifier: 1
+            duration: 5

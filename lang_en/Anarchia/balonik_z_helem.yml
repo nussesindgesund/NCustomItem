@@ -1,0 +1,66 @@
+id: 'balonik_z_helem'
+settings:
+  chance: 1.0
+  cooldown: 45
+  visual: true
+  cooldownmessage: true
+  block-in-region: true
+item:
+  material: LEATHER_HORSE_ARMOR
+  name: '&3&lHelium Balloon'
+  lore:
+    - '&8» &7This is an item obtained during'
+    - '&8» &fChildren''s Day 2025&7!'
+    - ''
+    - '&8» &7Once activated it rises, destroying'
+    - '&8» &7all blocks located above it'
+    - ''
+  model-data: 10108
+  usage: 1
+  unbreakable: true
+  glow: true
+  attributes:
+    - type: GENERIC_ATTACK_DAMAGE
+      amount: 1.0
+      slot: HAND
+  enchants:
+    unbreaking: 1
+sound:
+  enabled: true
+  type: 'ENTITY_PHANTOM_FLAP'
+particles:
+  enabled: true
+  type: 'CLOUD'
+titles:
+  damager:
+    enabled: true
+    title: "<dark_aqua>Balloon"
+    subtitle: "<white>The balloon has started its <dark_aqua>work!"
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+  victim:
+    enabled: false
+    title: ""
+    subtitle: ""
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+abilities:
+  'RIGHT_CLICK':
+    action:
+      - type: CLEAR_ABOVE
+        target: ATTACKER
+        height: 25
+        duration: 5
+        excluded:
+          - BEDROCK
+          - BARRIER
+          - END_PORTAL_FRAME
+          - OBSIDIAN
+      - type: EFFECT
+        target: ATTACKER
+        effects:
+          - potion: LEVITATION
+            amplifier: 4
+            duration: 5

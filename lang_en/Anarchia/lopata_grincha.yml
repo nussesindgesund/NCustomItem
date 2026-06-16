@@ -1,0 +1,64 @@
+id: 'lopata_grincha'
+settings:
+  chance: 1.0
+  cooldown: 30
+  visual: true
+  cooldownmessage: true
+  block-in-region: true
+item:
+  material: DIAMOND_SHOVEL
+  name: '&a&lGrinch''s Shovel'
+  lore:
+    - '&8» &7This is an item from:'
+    - '&8» &fthe Christmas event (2024)'
+    - ''
+    - '&8» &7After &ahitting &7an opponent'
+    - '&8» &7they become &cstunned&7, which'
+    - '&8» &7randomizes their view rotation!'
+    - ' '
+  model-data: 10115
+  usage: 1
+  unbreakable: true
+  glow: true
+  attributes:
+    - type: GENERIC_ATTACK_DAMAGE
+      amount: 1.0
+      slot: HAND
+  enchants:
+    unbreaking: 1
+sound:
+  enabled: true
+  type: 'ENTITY_ZOMBIE_VILLAGER_CONVERTED'
+particles:
+  enabled: true
+  type: 'SPELL_WITCH'
+titles:
+  damager:
+    enabled: true
+    title: "<aqua><bold>Freeze"
+    subtitle: "<white>You froze the player"
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+  victim:
+    enabled: true
+    title: "<aqua><bold>Freeze"
+    subtitle: "<white>You are <dark_aqua>frozen"
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+abilities:
+  'HIT_ENTITY':
+    action:
+      - type: STUN
+        target: VICTIM
+        duration: 4
+      - type: EFFECT
+        target: VICTIM
+        effects:
+          - potion: SLOWNESS
+            amplifier: 4
+            duration: 4
+      - type: RANDOM_ROTATION
+        target: VICTIM
+        max-pitch: 70.0

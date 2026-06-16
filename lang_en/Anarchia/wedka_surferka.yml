@@ -1,0 +1,57 @@
+id: 'wedka_surferka'
+settings:
+  chance: 1.0
+  cooldown: 15
+  visual: true
+  cooldownmessage: true
+  block-in-region: true
+item:
+  material: FISHING_ROD
+  name: '&b&lSurfer Fishing Rod'
+  lore:
+    - ''
+    - '&8» &7This is an item from:'
+    - '&8» &fthe summer event (2023)'
+    - ''
+    - '&8» &7This &aextraordinary &7rod grants you'
+    - '&8» &7the amazing ability to pull yourself'
+    - '&8» &7toward &bblocks &7and &dplayers&7, opening up entirely'
+    - '&8» &7new possibilities for exploration and combat!'
+    - ''
+  model-data: 10138
+  usage: -1
+  unbreakable: true
+  glow: true
+  attributes:
+    - type: GENERIC_ATTACK_DAMAGE
+      amount: 1.0
+      slot: HAND
+  enchants:
+    unbreaking: 1
+sound:
+  enabled: true
+  type: 'ENTITY_FISHING_BOBBER_SPLASH'
+particles:
+  enabled: true
+  type: 'WATER_SPLASH'
+titles:
+  damager:
+    enabled: true
+    title: ""
+    subtitle: "<white>You used the <#03c2fc>Surfer Fishing Rod!"
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+  victim:
+    enabled: false
+    title: ""
+    subtitle: ""
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+abilities:
+  'RIGHT_CLICK':
+    action:
+      - type: GRAPPLE_HOOK
+        speed: 2.5
+        vertical-boost: 0.4

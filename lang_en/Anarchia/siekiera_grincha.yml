@@ -1,0 +1,63 @@
+id: 'siekiera_grincha'
+settings:
+  chance: 1.0
+  cooldown: 60
+  visual: true
+  cooldownmessage: true
+  block-in-region: true
+item:
+  material: DIAMOND_AXE
+  name: '&2Grinch''s Axe'
+  lore:
+    - ''
+    - '&8» &7This is an item from:'
+    - '&8» &fthe Christmas event (2023)'
+    - ''
+    - '&8» &7On &ahit&7, it strikes &flightning'
+    - '&8» &7at the enemy, taking &c30%'
+    - '&8» &7of their health! The &fability &7works'
+    - '&8» &7once every 1 minute.'
+    - ''
+  model-data: 10114
+  usage: -1
+  unbreakable: true
+  glow: true
+  attributes:
+    - type: GENERIC_ATTACK_DAMAGE
+      amount: 1.0
+      slot: HAND
+  enchants:
+    unbreaking: 1
+sound:
+  enabled: true
+  type: 'ENTITY_LIGHTNING_BOLT_THUNDER'
+particles:
+  enabled: true
+  type: 'ELECTRIC_SPARK'
+titles:
+  damager:
+    enabled: true
+    title: ""
+    subtitle: "<white>You used the <#03c2fc>Grinch's Axe <white>on"
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+  victim:
+    enabled: true
+    title: ""
+    subtitle: "<white>A player <white>used the <#03c2fc>Grinch's Axe on you!"
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+abilities:
+  'HIT_ENTITY':
+    action:
+      - type: LIGHTNING_STRIKE
+        target: VICTIM
+        effect-only: true
+        damage-bonus: 0.0
+      - type: DAMAGE_PERCENT
+        target: VICTIM
+        percent: 30.0
+        mode: CURRENT
+        min-damage: 2.0

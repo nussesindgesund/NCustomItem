@@ -1,0 +1,52 @@
+id: 'shieldbreaker'
+settings:
+  chance: 1.0
+  cooldown: 60
+  visual: true
+  cooldownmessage: true
+  block-in-region: true
+item:
+  material: IRON_AXE
+  name: "<#FF5555><bold>ꜱʜɪᴇʟᴅ ʙʀᴇᴀᴋᴇʀ</bold>"
+  lore:
+    - ' <#444444>· <#CCCCCC>When you hit a blocking player, destroys <#FF5555>50% of the shield's durability<#CCCCCC>.'
+    - ' <#444444>· <#777777>ᴄᴏᴏʟᴅᴏᴡɴ <#444444>· <#CCCCCC>Wait <#FFFFFF>60 seconds<#CCCCCC> to use again.'
+    - ' <#444444>· <#777777>ᴜꜱᴀɢᴇ <#444444>· <#CCCCCC>Hit a blocking enemy with <#FFFFFF>LMB<#CCCCCC>.'
+  model-data: 0
+  usage: -1
+  unbreakable: true
+  glow: false
+  attributes:
+    - type: GENERIC_ATTACK_DAMAGE
+      amount: 1.0
+      slot: HAND
+  enchants:
+    unbreaking: 1
+sound:
+  enabled: false
+  type: 'ITEM_SHIELD_BREAK'
+particles:
+  enabled: false
+  type: 'CLOUD'
+titles:
+  damager:
+    enabled: true
+    title: "<#FF5555><bold>ꜱʜɪᴇʟᴅ ʙʀᴇᴀᴋᴇʀ</bold>"
+    subtitle: "<#444444>· <#AAAAAA>Destroyed <#FF5555>50% <#AAAAAA>of the enemy's shield durability <#444444>·"
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+  victim:
+    enabled: true
+    title: "<#FF5555><bold>ꜱʜɪᴇʟᴅ ᴅᴀᴍᴀɢᴇᴅ</bold>"
+    subtitle: "<#444444>· <#AAAAAA>Your shield lost <#FF5555>50% <#AAAAAA>of its durability <#444444>·"
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+abilities:
+  'HIT_ENTITY':
+    action:
+      - type: DAMAGE_ITEM
+        target: VICTIM
+        slot: OFF_HAND
+        percent: 50.0

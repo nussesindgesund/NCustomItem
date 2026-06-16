@@ -1,0 +1,62 @@
+id: 'wyrzutnia_hydroklatki'
+settings:
+  chance: 1.0
+  cooldown: 300
+  visual: true
+  cooldownmessage: true
+  block-in-region: true
+item:
+  material: CROSSBOW
+  name: '&3&lHydro Cage Launcher'
+  lore:
+    - '&8» &7This is an item obtained during'
+    - '&8» &fthe summer event 2025&7!'
+    - ''
+    - '&8» &7When used, it fires a projectile that'
+    - '&8» &7creates a &3water cage &7trapping'
+    - '&8» &7enemies in place!'
+  model-data: 10122
+  usage: 1
+  unbreakable: true
+  glow: true
+  attributes:
+    - type: GENERIC_ATTACK_DAMAGE
+      amount: 1.0
+      slot: HAND
+  enchants:
+    unbreaking: 1
+sound:
+  enabled: true
+  type: 'ITEM_CROSSBOW_SHOOT'
+particles:
+  enabled: true
+  type: 'WATER_SPLASH'
+titles:
+  damager:
+    enabled: true
+    title: "<dark_aqua>Hydro Cage"
+    subtitle: "<white>Created a <dark_aqua>hydro cage!"
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+  victim:
+    enabled: false
+    title: ""
+    subtitle: ""
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+abilities:
+  'RIGHT_CLICK_ARROW':
+    settings:
+      projectile: SNOWBALL
+      speed: 2.0
+      require-player-hit: true
+    action:
+      - type: MAGIC_BUBBLE
+        target: VICTIM
+        size: 5
+        duration: 8
+        cage-material: LIGHT_BLUE_STAINED_GLASS
+        fill-material: OAK_PLANKS
+        indestructible: true

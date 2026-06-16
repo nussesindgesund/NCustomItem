@@ -1,0 +1,62 @@
+id: 'rozdzka_iluzjonisty'
+settings:
+  chance: 1.0
+  cooldown: 45
+  visual: true
+  cooldownmessage: true
+  block-in-region: true
+item:
+  material: BLAZE_ROD
+  name: '&5&lIllusionist''s Wand'
+  lore:
+    - '&8» &7This is an item obtained during'
+    - '&8» &fthe circus event 2025&7!'
+    - ''
+    - '&8» &7LMB: summons &dEvoker Fangs'
+    - '&8» &7that attack enemies straight ahead.'
+    - ''
+    - '&8» &7RMB: you &dvanish &7for &e4s &7and create'
+    - '&8» &7a &dclone &7running forward.'
+  model-data: 10120
+  usage: 1
+  unbreakable: true
+  glow: true
+  attributes:
+    - type: GENERIC_ATTACK_DAMAGE
+      amount: 1.0
+      slot: HAND
+  enchants:
+    unbreaking: 1
+sound:
+  enabled: true
+  type: 'ENTITY_EVOKER_CAST_SPELL'
+particles:
+  enabled: true
+  type: 'SPELL_WITCH'
+titles:
+  damager:
+    enabled: true
+    title: ""
+    subtitle: "<green>Evoker Fangs <gray>have been <green>activated<gray>!"
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+  victim:
+    enabled: false
+    title: ""
+    subtitle: ""
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+abilities:
+  'LEFT_CLICK':
+    action:
+      - type: EVOKER_FANGS_LINE
+        length: 10
+        delay: 2
+        step: 1.5
+  'RIGHT_CLICK':
+    action:
+      - type: INVISIBLE_CLONE
+        duration: 4
+        speed: 0.6

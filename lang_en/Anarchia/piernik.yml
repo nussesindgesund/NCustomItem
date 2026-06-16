@@ -1,0 +1,57 @@
+id: 'piernik'
+settings:
+  chance: 1.0
+  cooldown: 5
+  visual: true
+  cooldownmessage: false
+  block-in-region: false
+item:
+  material: COOKIE
+  name: '&6&lGingerbread'
+  lore:
+    - '&8» &7This is an item from:'
+    - '&8» &fthe Christmas event (2024)'
+    - ''
+    - '&8» &7After eating the &egingerbread &7you receive'
+    - '&8» &7the &aHaste 10 mining speed effect&7!'
+    - ' '
+  model-data: 10130
+  usage: 1
+  unbreakable: false
+  glow: true
+  attributes:
+    - type: GENERIC_ATTACK_DAMAGE
+      amount: 1.0
+      slot: HAND
+  enchants:
+    unbreaking: 1
+sound:
+  enabled: true
+  type: 'ENTITY_PLAYER_BURP'
+particles:
+  enabled: false
+  type: 'CRIT'
+titles:
+  damager:
+    enabled: true
+    title: "<gold><bold>Gingerbread"
+    subtitle: "<yellow>You received the <gold>Haste 10 effect!"
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+  victim:
+    enabled: false
+    title: ""
+    subtitle: ""
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+abilities:
+  'EAT':
+    action:
+      - type: EFFECT
+        target: ATTACKER
+        effects:
+          - potion: HASTE
+            amplifier: 9
+            duration: 300

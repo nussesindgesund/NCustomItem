@@ -1,0 +1,74 @@
+id: 'cudowna_latarnia'
+settings:
+  chance: 1.0
+  cooldown: 120
+  visual: true
+  cooldownmessage: true
+  block-in-region: true
+item:
+  material: LANTERN
+  name: '&d&lWondrous Lantern'
+  lore:
+    - '&8» &7An item from the &fChristmas event 2025&7!'
+    - ''
+    - '&8» &7Once placed you receive:'
+    - '&8» &dRegeneration V &8(20s)'
+    - '&8» &eAbsorption VI &8(10s)'
+    - '&8» &cStrength II &8(10s)'
+    - ''
+    - '&8» &7The fountain stays active for &f30 seconds&7.'
+    - '&8» &7The effects work within a &f30 block&7 range.'
+    - '&8» &7Destroying the fountain removes the effects.'
+    - ''
+  model-data: 10102
+  usage: 1
+  unbreakable: true
+  glow: true
+  attributes:
+    - type: GENERIC_ATTACK_DAMAGE
+      amount: 1.0
+      slot: HAND
+  enchants:
+    unbreaking: 1
+sound:
+  enabled: true
+  type: 'BLOCK_BEACON_ACTIVATE'
+particles:
+  enabled: true
+  type: 'END_ROD'
+titles:
+  damager:
+    enabled: true
+    title: ""
+    subtitle: "<dark_purple>Wondrous Lantern! <gray>Activated for <light_purple>30 seconds<gray>!"
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+  victim:
+    enabled: false
+    title: ""
+    subtitle: ""
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+abilities:
+  'PLACE_BLOCK':
+    settings:
+      radius: 30.0
+    action:
+      - type: FOUNTAIN_AREA
+        radius: 30.0
+        duration: 30
+        tick-rate: 20
+        particle: HEART
+        owner-effects:
+          - potion: REGENERATION
+            amplifier: 4
+            duration: 20
+          - potion: ABSORPTION
+            amplifier: 5
+            duration: 10
+          - potion: STRENGTH
+            amplifier: 1
+            duration: 10
+        effects: []

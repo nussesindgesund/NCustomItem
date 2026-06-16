@@ -1,0 +1,60 @@
+id: 'zatruty_olowek'
+settings:
+  chance: 1.0
+  cooldown: 60
+  visual: true
+  cooldownmessage: true
+  block-in-region: true
+item:
+  material: STICK
+  name: '&a&lPoisoned Pencil'
+  lore:
+    - '&8» &7This is an item obtained from'
+    - '&8» &fthe school event 2024&7!'
+    - ''
+    - '&8» &7After hitting an enemy,'
+    - '&8» &7they receive a &cpoison effect&7!'
+    - ''
+  model-data: 10112
+  usage: 10
+  unbreakable: true
+  glow: true
+  attributes:
+    - type: GENERIC_ATTACK_DAMAGE
+      amount: 1.0
+      slot: HAND
+  enchants:
+    unbreaking: 1
+sound:
+  enabled: true
+  type: 'ENTITY_SPIDER_AMBIENT'
+particles:
+  enabled: true
+  type: 'VILLAGER_HAPPY'
+titles:
+  damager:
+    enabled: true
+    title: "<green><bold>Poisoned Pencil"
+    subtitle: "<dark_green>You poisoned a player"
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+  victim:
+    enabled: true
+    title: "<green><bold>Poisoned Pencil"
+    subtitle: "<dark_green>You were poisoned by"
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+abilities:
+  'HIT_ENTITY':
+    action:
+      - type: EFFECT
+        target: VICTIM
+        effects:
+          - potion: POISON
+            amplifier: 1
+            duration: 30
+          - potion: WEAKNESS
+            amplifier: 1
+            duration: 30

@@ -1,0 +1,61 @@
+id: 'bombarda_maxima'
+settings:
+  chance: 1.0
+  cooldown: 2
+  visual: true
+  cooldownmessage: true
+  block-in-region: true
+item:
+  material: TNT
+  name: '&5&lBombarda maxima'
+  lore:
+    - '&8» &7This is an item obtained from'
+    - '&8» &fthe 2024 summer pass&7!'
+    - ''
+    - '&8» &7After being fired it explodes in the area'
+    - '&8» &7and destroys every possible block except'
+    - '&8» &fbedrock&7!'
+    - ''
+  model-data: 10105
+  usage: 1
+  unbreakable: true
+  glow: true
+  attributes:
+    - type: GENERIC_ATTACK_DAMAGE
+      amount: 1.0
+      slot: HAND
+  enchants:
+    unbreaking: 1
+sound:
+  enabled: true
+  type: 'ENTITY_TNT_PRIMED'
+particles:
+  enabled: true
+  type: 'EXPLOSION_LARGE'
+titles:
+  damager:
+    enabled: true
+    title: "<dark_purple><bold>Bombarda maxima"
+    subtitle: "<white>You blew up everything <red>around!"
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+  victim:
+    enabled: false
+    title: ""
+    subtitle: ""
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+abilities:
+  'RIGHT_CLICK':
+    action:
+      - type: THROW_FIREBALL
+        velocity: 1.6
+        yield: 0.0
+        blast-radius: 10
+        excluded:
+          - BARRIER
+          - END_PORTAL_FRAME
+          - END_PORTAL
+          - NETHER_PORTAL

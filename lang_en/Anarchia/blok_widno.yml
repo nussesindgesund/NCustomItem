@@ -1,0 +1,64 @@
+id: 'blok_widno'
+settings:
+  chance: 1.0
+  cooldown: 180
+  visual: true
+  cooldownmessage: true
+  block-in-region: true
+item:
+  material: SOUL_LANTERN
+  name: '&c&lPhantom Block'
+  lore:
+    - '&8» &7This is an item obtained during:'
+    - '&8» &fChildren''s Day 2025&7!'
+    - ''
+    - '&8» &7Once placed on the ground,'
+    - '&8» &7it releases &eenergy&7 that lowers'
+    - '&8» &fthe maximum heart &7limit of nearby'
+    - '&8» &7players for a set amount of time..'
+  model-data: 10104
+  usage: 1
+  unbreakable: true
+  glow: true
+  attributes:
+    - type: GENERIC_ATTACK_DAMAGE
+      amount: 1.0
+      slot: HAND
+  enchants:
+    unbreaking: 1
+sound:
+  enabled: true
+  type: 'ENTITY_WITHER_AMBIENT'
+particles:
+  enabled: true
+  type: 'SOUL_FIRE_FLAME'
+titles:
+  damager:
+    enabled: true
+    title: "<red>Phantom Block"
+    subtitle: "<gray>You weakened nearby <green>players!"
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+  victim:
+    enabled: true
+    title: "<red>Phantom Block"
+    subtitle: "<gray>Something is happening to your health..."
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+abilities:
+  'RIGHT_CLICK_REGION':
+    settings:
+      radius: 10.0
+    action:
+      - type: MAX_HEALTH_REDUCE
+        target: VICTIM
+        amount: 20.0
+        duration: 150
+      - type: EFFECT
+        target: VICTIM
+        effects:
+          - potion: WITHER
+            amplifier: 0
+            duration: 5

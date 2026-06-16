@@ -1,0 +1,38 @@
+id: 'lizak'
+settings:
+  chance: 1.0
+  cooldown: 0
+  visual: false
+  cooldownmessage: false
+  block-in-region: false
+  allow-offhand: true
+item:
+  material: ALLIUM
+  name: '&d&lLollipop'
+  lore:
+    - '&8» &7Item obtained on &fChildren''s Day&7!'
+    - '&8» &7Hold it in your hand to receive:'
+    - ' &8- &fSTRENGTH 1 effect'
+    - ''
+  model-data: 0
+  usage: -1
+  unbreakable: true
+  glow: true
+  attributes:
+    - type: GENERIC_ATTACK_DAMAGE
+      amount: 1.0
+      slot: HAND
+  enchants:
+    unbreaking: 1
+sound:
+  enabled: false
+  type: 'BLOCK_NOTE_BLOCK_CHIME'
+abilities:
+  'PASSIVE_OFFHAND':
+    action:
+      - type: EFFECT
+        target: ATTACKER
+        effects:
+          - potion: STRENGTH
+            amplifier: 0
+            duration: 4

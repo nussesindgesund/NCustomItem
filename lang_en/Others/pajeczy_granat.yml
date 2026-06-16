@@ -1,0 +1,51 @@
+id: 'pajeczy_granat'
+settings:
+  cooldown: 15
+  visual: true
+  cooldownmessage: true
+  block-in-region: true
+item:
+  material: SPIDER_EYE
+  name: "<#888800><bold>ꜱᴘɪᴅᴇʀ ɢʀᴇɴᴀᴅᴇ</bold>"
+  lore:
+    - ' <#444444>· <#CCCCCC>When thrown, creates a <#888800>3×3×2 cobweb <#CCCCCC>at the point of impact.'
+    - ' <#444444>· <#777777>ᴄᴏᴏʟᴅᴏᴡɴ <#444444>· <#CCCCCC>Wait <#FFFFFF>15 seconds<#CCCCCC> to use again.'
+    - ' <#444444>· <#777777>ᴜꜱᴀɢᴇ <#444444>· <#CCCCCC>Click <#FFFFFF>RMB<#CCCCCC> to throw.'
+  model-data: 0
+  usage: -1
+  unbreakable: true
+  glow: true
+  attributes:
+    - type: GENERIC_ATTACK_DAMAGE
+      amount: 1.0
+      slot: HAND
+  enchants:
+    unbreaking: 1
+sound:
+  enabled: true
+  type: 'ENTITY_SNOWBALL_THROW'
+particles:
+  enabled: false
+  type: 'CLOUD'
+titles:
+  damager:
+    enabled: true
+    title: "<#888800><bold>ꜱᴘɪᴅᴇʀ ɢʀᴇɴᴀᴅᴇ</bold>"
+    subtitle: "<#444444>· <#AAAAAA>The grenade was thrown <#444444>·"
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+  victim:
+    enabled: false
+    title: ""
+    subtitle: ""
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+abilities:
+  'RIGHT_CLICK':
+    action:
+      - type: SPIDER_GRENADE
+        velocity: 1.4
+        web-width: 3
+        web-height: 2

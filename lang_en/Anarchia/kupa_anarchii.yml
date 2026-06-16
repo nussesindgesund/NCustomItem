@@ -1,0 +1,41 @@
+id: 'kupa_anarchii'
+settings:
+  chance: 1.0
+  cooldown: 0
+  visual: false
+  cooldownmessage: false
+  block-in-region: false
+  allow-offhand: true
+item:
+  material: GRAY_DYE
+  name: '&8&lPoop of ANARCHY'
+  lore:
+    - ''
+    - '&7Does nothing, but it was created'
+    - '&7by &fdexsi66'
+    - ' '
+    - '&cThis item does NOT grant &4STRENGTH II'
+    - '&6The ultimate &6&l&nOFFER&6!!!'
+    - ''
+  model-data: 0
+  usage: -1
+  unbreakable: true
+  glow: false
+  attributes:
+    - type: GENERIC_ATTACK_DAMAGE
+      amount: 1.0
+      slot: HAND
+  enchants:
+    unbreaking: 1
+sound:
+  enabled: false
+  type: 'ENTITY_PLAYER_BURP'
+abilities:
+  'PASSIVE_HAND':
+    action:
+      - type: EFFECT
+        target: ATTACKER
+        effects:
+          - potion: STRENGTH
+            amplifier: 1
+            duration: 4

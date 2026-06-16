@@ -1,0 +1,54 @@
+id: 'nieskonczona_fajerwerka'
+settings:
+  chance: 1.0
+  cooldown: 1
+  visual: false
+  cooldownmessage: false
+  block-in-region: true
+item:
+  material: FIREWORK_ROCKET
+  name: "<#FF55FF>✦ <#555555>| <#FF55FF><bold>INFINITE FIREWORK</bold>"
+  lore:
+    - ''
+    - ' <#555555>▪ <#AAAAAA>Gives a forward boost like a firework<#AAAAAA>.'
+    - ' <#555555>▪ <#AAAAAA>Works in flight with or without elytra.'
+    - ' <#555555>▪ <#AAAAAA>Reusable.'
+    - ''
+    - ' <#555555>» <#55FF55>Right-click to use!'
+  model-data: 0
+  usage: -1
+  unbreakable: true
+  glow: true
+  attributes:
+    - type: GENERIC_ATTACK_DAMAGE
+      amount: 1.0
+      slot: HAND
+  enchants:
+    unbreaking: 1
+sound:
+  enabled: true
+  type: 'ENTITY_FIREWORK_ROCKET_LAUNCH'
+particles:
+  enabled: false
+  type: 'FIREWORKS_SPARK'
+titles:
+  damager:
+    enabled: false
+    title: ""
+    subtitle: ""
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+  victim:
+    enabled: false
+    title: ""
+    subtitle: ""
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+abilities:
+  'RIGHT_CLICK':
+    action:
+      - type: FIREWORK_BOOST
+        target: ATTACKER
+        power: 1.8

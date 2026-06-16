@@ -1,0 +1,54 @@
+id: 'weakbow'
+settings:
+  chance: 1.0
+  cooldown: 60
+  visual: true
+  cooldownmessage: true
+  block-in-region: true
+item:
+  material: BOW
+  name: "<#AAAAAA><bold>ʙᴏᴡ ᴏꜰ ᴡᴇᴀᴋɴᴇꜱꜱ</bold>"
+  lore:
+    - ' <#444444>· <#CCCCCC>On hit, the arrow applies <#AAAAAA>Weakness I <#CCCCCC>for <#FFFFFF>5 seconds<#CCCCCC>.'
+    - ' <#444444>· <#777777>ᴄᴏᴏʟᴅᴏᴡɴ <#444444>· <#CCCCCC>Wait <#FFFFFF>60 seconds<#CCCCCC> to use again.'
+    - ' <#444444>· <#777777>ᴜꜱᴀɢᴇ <#444444>· <#CCCCCC>Draw and fire the bow to use.'
+  model-data: 0
+  usage: -1
+  unbreakable: true
+  glow: false
+  attributes:
+    - type: GENERIC_ATTACK_DAMAGE
+      amount: 1.0
+      slot: HAND
+  enchants:
+    unbreaking: 1
+sound:
+  enabled: false
+  type: 'ENTITY_ARROW_SHOOT'
+particles:
+  enabled: false
+  type: 'CLOUD'
+titles:
+  damager:
+    enabled: true
+    title: "<#AAAAAA><bold>ʙᴏᴡ ᴏꜰ ᴡᴇᴀᴋɴᴇꜱꜱ</bold>"
+    subtitle: "<#444444>· <#AAAAAA>Hit landed and weakness applied <#444444>·"
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+  victim:
+    enabled: true
+    title: "<#AAAAAA><bold>ᴡᴇᴀᴋɴᴇꜱꜱ</bold>"
+    subtitle: "<#444444>· <#AAAAAA>You were hit by a weakness arrow <#444444>·"
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+abilities:
+  'PROJECTILE_HIT':
+    action:
+      - type: EFFECT
+        target: VICTIM
+        effects:
+          - potion: weakness
+            amplifier: 0
+            duration: 5

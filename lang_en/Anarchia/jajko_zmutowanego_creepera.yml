@@ -1,0 +1,58 @@
+id: 'jajko_zmutowanego_creepera'
+settings:
+  chance: 1.0
+  cooldown: 0
+  visual: true
+  cooldownmessage: false
+  block-in-region: true
+item:
+  material: SPIDER_EYE
+  name: '&a&lMutated Creeper Egg'
+  lore:
+    - '&8» &7This is an item obtained during:'
+    - '&8» &fa special March event 2025&7!'
+    - ''
+    - '&8» &7Right-clicking the egg summons'
+    - '&8» &fa powerful &7creeper that, after &cexploding&7,'
+    - '&8» &7deals &ehuge &7damage.'
+  model-data: 10145
+  usage: 1
+  unbreakable: true
+  glow: true
+  attributes:
+    - type: GENERIC_ATTACK_DAMAGE
+      amount: 1.0
+      slot: HAND
+  enchants:
+    unbreaking: 1
+sound:
+  enabled: true
+  type: 'ENTITY_CREEPER_PRIMED'
+particles:
+  enabled: true
+  type: 'EXPLOSION_NORMAL'
+titles:
+  damager:
+    enabled: true
+    title: ""
+    subtitle: "<green>Summoned a <dark_green>Mutated Creeper!"
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+  victim:
+    enabled: false
+    title: ""
+    subtitle: ""
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+abilities:
+  'RIGHT_CLICK':
+    action:
+      - type: SUMMON_CREEPER
+        power: 8
+        charged: true
+        auto-detonate-seconds: 3
+        spawn-offset: 3.0
+        display-name: "<dark_red><bold>Zmutowany Creeper"
+        show-name: true

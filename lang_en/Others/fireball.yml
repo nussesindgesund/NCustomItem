@@ -1,0 +1,50 @@
+id: 'fireball'
+settings:
+  chance: 1.0
+  cooldown: 60
+  visual: true
+  cooldownmessage: true
+  block-in-region: true
+item:
+  material: FIRE_CHARGE
+  name: "<#FFAA00><bold>ꜰɪʀᴇʙᴀʟʟ</bold>"
+  lore:
+    - ' <#444444>· <#CCCCCC>Fires an <#FFAA00>explosive projectile <#CCCCCC>forward.'
+    - ' <#444444>· <#777777>ᴄᴏᴏʟᴅᴏᴡɴ <#444444>· <#CCCCCC>Wait <#FFFFFF>60 seconds<#CCCCCC> to use again.'
+    - ' <#444444>· <#777777>ᴜꜱᴀɢᴇ <#444444>· <#CCCCCC>Right-click <#FFFFFF>RMB<#CCCCCC> to fire.'
+  model-data: 0
+  usage: -1
+  unbreakable: true
+  glow: false
+  attributes:
+    - type: GENERIC_ATTACK_DAMAGE
+      amount: 1.0
+      slot: HAND
+  enchants:
+    unbreaking: 1
+sound:
+  enabled: true
+  type: 'ENTITY_BLAZE_SHOOT'
+particles:
+  enabled: false
+  type: 'FLAME'
+titles:
+  damager:
+    enabled: true
+    title: "<#FFAA00><bold>ꜰɪʀᴇʙᴀʟʟ</bold>"
+    subtitle: "<#444444>· <#AAAAAA>Projectile has been fired <#444444>·"
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+  victim:
+    enabled: true
+    title: "<#FFAA00><bold>ꜰɪʀᴇʙᴀʟʟ</bold>"
+    subtitle: "<#444444>· <#AAAAAA>You were struck by a fiery projectile <#444444>·"
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+abilities:
+  'RIGHT_CLICK':
+    action:
+      - type: LAUNCH_FIREBALL
+        yield: 1.0

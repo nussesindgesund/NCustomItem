@@ -1,0 +1,52 @@
+id: 'skok_zajaca'
+settings:
+  chance: 1.0
+  cooldown: 5
+  visual: true
+  cooldownmessage: true
+  block-in-region: true
+item:
+  material: RABBIT_FOOT
+  name: "<#55FF55><bold>ʀᴀʙʙɪᴛ'ꜱ ʟᴇᴀᴘ</bold>"
+  lore:
+    - ' <#444444>· <#CCCCCC>Launches you high <#55FF55>into the air<#CCCCCC>.'
+    - ' <#444444>· <#777777>ᴄᴏᴏʟᴅᴏᴡɴ <#444444>· <#CCCCCC>Wait <#FFFFFF>5 seconds<#CCCCCC> to use again.'
+    - ' <#444444>· <#777777>ᴜꜱᴀɢᴇ <#444444>· <#CCCCCC>Click <#FFFFFF>RMB<#CCCCCC> to jump.'
+  model-data: 0
+  usage: -1
+  unbreakable: true
+  glow: true
+  attributes:
+    - type: GENERIC_ATTACK_DAMAGE
+      amount: 1.0
+      slot: HAND
+  enchants:
+    unbreaking: 1
+sound:
+  enabled: true
+  type: 'ENTITY_RABBIT_JUMP'
+particles:
+  enabled: true
+  type: 'CLOUD'
+titles:
+  damager:
+    enabled: true
+    title: "<#55FF55><bold>ʀᴀʙʙɪᴛ'ꜱ ʟᴇᴀᴘ</bold>"
+    subtitle: "<#444444>· <#AAAAAA>You were launched upward <#444444>·"
+    fadeIn: 5
+    stay: 30
+    fadeOut: 10
+  victim:
+    enabled: false
+    title: ""
+    subtitle: ""
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+abilities:
+  'RIGHT_CLICK':
+    action:
+      - type: RABBIT_JUMP
+        target: ATTACKER
+        vertical-power: 1.2
+        horizontal-power: 0.4

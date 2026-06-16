@@ -1,0 +1,52 @@
+﻿id: 'item_koza'
+settings:
+  cooldown: 60
+  visual: true
+  cooldownmessage: true
+  block-in-region: true
+item:
+  material: GOAT_HORN
+  name: "<#FFFFFF><bold>ɢᴏᴀᴛ</bold>"
+  lore:
+    - ' <#444444>· <#CCCCCC>Creates an isolated <#FFFFFF>1v1 zone <#CCCCCC>around the target.'
+    - ' <#444444>· <#CCCCCC>Blocks the opponent from <#FFFFFF>fleeing, elytra and teleport<#CCCCCC>.'
+    - ' <#444444>· <#777777>ʀᴀʀɪᴛʏ <#444444>· <#CCCCCC>Single-use<#CCCCCC>. Hit a player with <#FFFFFF>LMB<#CCCCCC> to challenge.'
+  model-data: 10004
+  usage: 1
+  unbreakable: true
+  glow: true
+  attributes:
+    - type: GENERIC_ATTACK_DAMAGE
+      amount: 1.0
+      slot: HAND
+  enchants:
+    unbreaking: 1
+sound:
+  enabled: true
+  type: 'ENTITY_GOAT_SCREAMING_PREPARE_RAM'
+titles:
+  damager:
+    enabled: true
+    title: "<#FFFFFF><bold>ᴅᴜᴇʟ</bold>"
+    subtitle: "<#444444>· <#AAAAAA>A 1v1 arena has been created <#444444>·"
+    fadeIn: 10
+    stay: 50
+    fadeOut: 10
+  victim:
+    enabled: true
+    title: "<#FF5555><bold>ᴄʜᴀʟʟᴇɴɢᴇ</bold>"
+    subtitle: "<#444444>· <#AAAAAA>You have been trapped in a <#FFFFFF>1v1 <#AAAAAA>arena <#444444>·"
+    fadeIn: 10
+    stay: 50
+    fadeOut: 10
+abilities:
+  'HIT_ENTITY':
+    action:
+      - type: CAGE_BORDER
+        border-size: 5
+        duration: 10
+        disable:
+          elytra: true
+          teleport: true
+          ender-pearl: true
+          chorus-fruit: true

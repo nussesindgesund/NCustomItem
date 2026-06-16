@@ -1,0 +1,57 @@
+id: 'parawan'
+settings:
+  chance: 1.0
+  cooldown: 30
+  visual: true
+  cooldownmessage: true
+  block-in-region: true
+item:
+  material: GLASS_PANE
+  name: '&e&lFolding Screen'
+  lore:
+    - '&8» &7This is an item obtained from'
+    - '&8» &fthe summer event 2024&7!'
+    - ''
+    - '&8» &7When used, this item knocks back'
+    - '&8» &7all opponents nearby!'
+    - ''
+  model-data: 10143
+  usage: -1
+  unbreakable: true
+  glow: true
+  attributes:
+    - type: GENERIC_ATTACK_DAMAGE
+      amount: 1.0
+      slot: HAND
+  enchants:
+    unbreaking: 1
+sound:
+  enabled: true
+  type: 'BLOCK_GLASS_PLACE'
+particles:
+  enabled: true
+  type: 'CLOUD'
+titles:
+  damager:
+    enabled: true
+    title: "<green><bold>Folding Screen"
+    subtitle: "<green>You knocked back all <dark_green>players!"
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+  victim:
+    enabled: true
+    title: "<green><bold>Folding Screen"
+    subtitle: "<green>You were knocked back by a <dark_green>folding screen!"
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+abilities:
+  'RIGHT_CLICK_REGION':
+    settings:
+      radius: 5.0
+    action:
+      - type: KNOCK
+        target: VICTIM
+        power: 2.5
+        vertical: 0.5

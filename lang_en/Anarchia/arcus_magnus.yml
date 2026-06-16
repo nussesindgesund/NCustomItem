@@ -1,0 +1,61 @@
+id: 'arcus_magnus'
+settings:
+  chance: 1.0
+  cooldown: 8
+  visual: true
+  cooldownmessage: true
+  block-in-region: true
+item:
+  material: BOW
+  name: '&a&lArcus Magnus'
+  lore:
+    - '&8» &7This is an item from:'
+    - '&8» &fthe Halloween event (2024)'
+    - ''
+    - '&8» &7A bow that lets you pull off'
+    - '&8» &edevastating &7combos!'
+    - '&8» &7After hitting an enemy'
+    - '&8» &7you deal &chuge damage&7, which'
+    - '&8» &7increases with every hit!'
+    - ' '
+  model-data: 10119
+  usage: -1
+  unbreakable: true
+  glow: true
+  attributes:
+    - type: GENERIC_ATTACK_DAMAGE
+      amount: 1.0
+      slot: HAND
+  enchants:
+    unbreaking: 1
+sound:
+  enabled: true
+  type: 'ENTITY_ARROW_HIT_PLAYER'
+particles:
+  enabled: true
+  type: 'CRIT_MAGIC'
+titles:
+  damager:
+    enabled: true
+    title: "<green><bold>Arcus Magnus"
+    subtitle: "<green>You shot a player"
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+  victim:
+    enabled: true
+    title: "<green><bold>Arcus Magnus"
+    subtitle: "<green>You were shot by an <dark_green>Arcus Magnus!"
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+abilities:
+  'RIGHT_CLICK_ARROW':
+    settings:
+      speed: 2.5
+      auto-load: false
+    action:
+      - type: ARROW_COMBO
+        count: 5
+        spread: 8.0
+        speed: 2.5

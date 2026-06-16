@@ -1,0 +1,74 @@
+id: 'korona_anarchii'
+settings:
+  chance: 1.0
+  cooldown: 0
+  visual: false
+  cooldownmessage: false
+  block-in-region: false
+item:
+  material: GOLDEN_HELMET
+  name: '&6Crown of ANARCHY'
+  lore:
+    - ''
+    - '&8» &eThis item is one of a kind!'
+    - '&8» &7There is only one such crown'
+    - '&8» &7on the entire server! And it will'
+    - '&8» &7never be destroyed.'
+    - ' '
+    - '&8» &eItem perks:'
+    - ' &fPermanent effects:'
+    - '  &8- &fSpeed II'
+    - '  &8- &fFire Resistance I'
+    - '  &8- &fStrength II'
+    - '  &8- &fResistance III'
+    - '  &8- &fLuck I'
+    - ''
+  model-data: 10117
+  usage: -1
+  unbreakable: true
+  glow: true
+  attributes:
+    - type: GENERIC_ATTACK_DAMAGE
+      amount: 1.0
+      slot: HAND
+  enchants:
+    unbreaking: 1
+sound:
+  enabled: false
+  type: 'BLOCK_BEACON_ACTIVATE'
+titles:
+  damager:
+    enabled: false
+    title: ""
+    subtitle: ""
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+  victim:
+    enabled: false
+    title: ""
+    subtitle: ""
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+abilities:
+  'PASSIVE_HELMET':
+    action:
+      - type: EFFECT
+        target: ATTACKER
+        effects:
+          - potion: SPEED
+            amplifier: 1
+            duration: 4
+          - potion: FIRE_RESISTANCE
+            amplifier: 0
+            duration: 4
+          - potion: STRENGTH
+            amplifier: 1
+            duration: 4
+          - potion: RESISTANCE
+            amplifier: 2
+            duration: 4
+          - potion: LUCK
+            amplifier: 0
+            duration: 4

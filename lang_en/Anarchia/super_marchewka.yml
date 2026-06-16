@@ -1,0 +1,57 @@
+id: 'super_marchewka'
+settings:
+  chance: 1.0
+  cooldown: 90
+  visual: true
+  cooldownmessage: true
+  block-in-region: true
+item:
+  material: GOLDEN_CARROT
+  name: "<#FFAA00><bold>ꜱᴜᴘᴇʀ ɴᴇᴠᴇʀ-ᴇɴᴅɪɴɢ ᴄᴀʀʀᴏᴛ</bold>"
+  lore:
+    - ' <#444444>· <#CCCCCC>You enter <#FFFFFF>GIGANTIC mode <#CCCCCC>for <#FFAA00>30 seconds<#CCCCCC>.'
+    - ' <#444444>· <#CCCCCC>Increases <#FFAA00>damage <#CCCCCC>by <#FFFFFF>+5 <#CCCCCC>and <#FF5555>HP <#CCCCCC>by <#FFFFFF>+6 hearts<#CCCCCC>.'
+    - ' <#444444>· <#777777>ʀᴀʀɪᴛʏ <#444444>· <#CCCCCC>Easter 2026 <#444444>· <#FFAA00>0.38%<#CCCCCC>.'
+    - ' <#444444>· <#777777>ᴜꜱᴀɢᴇ <#444444>· <#FF5555>Single-use<#CCCCCC>. Press <#FFFFFF>RMB <#CCCCCC>to activate.'
+  model-data: 10101
+  usage: 1
+  unbreakable: true
+  glow: true
+  attributes:
+    - type: GENERIC_ATTACK_DAMAGE
+      amount: 1.0
+      slot: HAND
+  enchants:
+    unbreaking: 1
+sound:
+  enabled: true
+  type: 'ENTITY_PLAYER_LEVELUP'
+particles:
+  enabled: true
+  type: 'TOTEM'
+titles:
+  damager:
+    enabled: true
+    title: "<#FFAA00><bold>ɢɪᴀɴᴛ</bold>"
+    subtitle: "<#444444>· <#AAAAAA>Gigantic mode active for <#FFAA00>30 seconds <#444444>·"
+    fadeIn: 10
+    stay: 60
+    fadeOut: 10
+  victim:
+    enabled: false
+    title: ""
+    subtitle: ""
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+abilities:
+  'RIGHT_CLICK':
+    action:
+      - type: ATTRIBUTE
+        target: ATTACKER
+        duration: 30
+        attributes:
+          - type: GENERIC_ATTACK_DAMAGE
+            amount: 5.0
+          - type: GENERIC_MAX_HEALTH
+            amount: 12.0

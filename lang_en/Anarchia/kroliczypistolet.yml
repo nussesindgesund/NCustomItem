@@ -1,0 +1,61 @@
+id: 'kroliczypistolet'
+settings:
+  chance: 1.0
+  cooldown: 20
+  visual: true
+  cooldownmessage: true
+  block-in-region: true
+item:
+  material: CARROT_ON_A_STICK
+  name: "<#FFAA00><bold>ʀᴀʙʙɪᴛ ᴘɪꜱᴛᴏʟ</bold>"
+  lore:
+    - ' <#444444>· <#CCCCCC>Fires a projectile that <#FFAA00>slows and weakens <#CCCCCC>whoever it hits.'
+    - ' <#444444>· <#777777>ᴄᴏᴏʟᴅᴏᴡɴ <#444444>· <#CCCCCC>Wait <#FFFFFF>20 seconds<#CCCCCC> to use it again.'
+    - ' <#444444>· <#777777>ᴜꜱᴀɢᴇ <#444444>· <#CCCCCC>Click <#FFFFFF>RMB<#CCCCCC> to fire.'
+  model-data: 0
+  usage: -1
+  unbreakable: true
+  glow: false
+  attributes:
+    - type: GENERIC_ATTACK_DAMAGE
+      amount: 1.0
+      slot: HAND
+  enchants:
+    unbreaking: 1
+sound:
+  enabled: true
+  type: 'ENTITY_EGG_THROW'
+particles:
+  enabled: false
+  type: 'CLOUD'
+titles:
+  damager:
+    enabled: true
+    title: "<#FFAA00><bold>ʀᴀʙʙɪᴛ ᴘɪꜱᴛᴏʟ</bold>"
+    subtitle: "<#444444>· <#AAAAAA>The projectile has been fired <#444444>·"
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+  victim:
+    enabled: true
+    title: "<#FFAA00><bold>ʀᴀʙʙɪᴛ ᴘɪꜱᴛᴏʟ</bold>"
+    subtitle: "<#444444>· <#AAAAAA>You have been slowed and weakened <#444444>·"
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+abilities:
+  'RIGHT_CLICK_ARROW':
+    settings:
+      projectile: SNOWBALL
+      speed: 2.0
+      auto-load: true
+    action:
+      - type: EFFECT
+        target: VICTIM
+        effects:
+          - potion: slowness
+            amplifier: 6
+            duration: 2
+          - potion: weakness
+            amplifier: 0
+            duration: 3

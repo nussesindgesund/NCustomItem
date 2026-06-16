@@ -1,0 +1,55 @@
+id: 'magicznabanka'
+settings:
+  chance: 1.0
+  cooldown: 60
+  visual: true
+  cooldownmessage: true
+  block-in-region: true
+item:
+  material: GLASS_BOTTLE
+  name: "<#55FFFF><bold>ᴍᴀɢɪᴄ ʙᴜʙʙʟᴇ</bold>"
+  lore:
+    - ' <#444444>· <#CCCCCC>Creates a protective <#55FFFF>glass dome <#CCCCCC>around you.'
+    - ' <#444444>· <#777777>ᴄᴏᴏʟᴅᴏᴡɴ <#444444>· <#CCCCCC>Wait <#FFFFFF>60 seconds<#CCCCCC> to use again.'
+    - ' <#444444>· <#777777>ᴜꜱᴀɢᴇ <#444444>· <#CCCCCC>Right-click <#FFFFFF>RMB<#CCCCCC> to activate.'
+  model-data: 0
+  usage: -1
+  unbreakable: true
+  glow: false
+  attributes:
+    - type: GENERIC_ATTACK_DAMAGE
+      amount: 1.0
+      slot: HAND
+  enchants:
+    unbreaking: 1
+sound:
+  enabled: true
+  type: 'BLOCK_GLASS_PLACE'
+particles:
+  enabled: false
+  type: 'CLOUD'
+titles:
+  damager:
+    enabled: true
+    title: "<#55FFFF><bold>ᴍᴀɢɪᴄ ʙᴜʙʙʟᴇ</bold>"
+    subtitle: "<#444444>· <#AAAAAA>The glass dome has been activated <#444444>·"
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+  victim:
+    enabled: false
+    title: ""
+    subtitle: ""
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+abilities:
+  'RIGHT_CLICK':
+    action:
+      - type: MAGIC_BUBBLE
+        target: ATTACKER
+        size: 6
+        duration: 10
+        cage-material: BLUE_STAINED_GLASS
+        fill-material: AIR
+        indestructible: true

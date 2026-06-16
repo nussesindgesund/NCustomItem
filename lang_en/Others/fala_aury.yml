@@ -1,0 +1,70 @@
+id: 'fala_aury'
+settings:
+  chance: 1.0
+  cooldown: 15
+  visual: true
+  cooldownmessage: true
+  block-in-region: true
+item:
+  material: WIND_CHARGE
+  name: "<#55FFFF><bold>ᴀᴜʀᴀ ᴡᴀᴠᴇ</bold>"
+  lore:
+    - ' <#444444>· <#CCCCCC>Sends a <#55FFFF>wave <#CCCCCC>forward, hitting enemies.'
+    - ' <#444444>· <#CCCCCC>Struck enemies receive slowness and nausea effects.'
+    - ' <#444444>· <#777777>ᴄᴏᴏʟᴅᴏᴡɴ <#444444>· <#CCCCCC>Wait <#FFFFFF>15 seconds<#CCCCCC> to use again.'
+    - ' <#444444>· <#777777>ᴜꜱᴀɢᴇ <#444444>· <#CCCCCC>Right-click <#FFFFFF>RMB<#CCCCCC> to activate.'
+  model-data: 0
+  usage: -1
+  unbreakable: true
+  glow: true
+  attributes:
+    - type: GENERIC_ATTACK_DAMAGE
+      amount: 1.0
+      slot: HAND
+  enchants:
+    unbreaking: 1
+sound:
+  enabled: true
+  type: 'ENTITY_BREEZE_WIND_BURST'
+particles:
+  enabled: false
+  type: 'CLOUD'
+titles:
+  damager:
+    enabled: true
+    title: "<#55FFFF><bold>ᴀᴜʀᴀ ᴡᴀᴠᴇ</bold>"
+    subtitle: "<#444444>· <#AAAAAA>Wave sent forward <#444444>·"
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+  victim:
+    enabled: true
+    title: "<#55FFFF><bold>ᴀᴜʀᴀ ᴡᴀᴠᴇ</bold>"
+    subtitle: "<#444444>· <#AAAAAA>You were struck by an aura wave <#444444>·"
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+abilities:
+  'RIGHT_CLICK_WAVES':
+    settings:
+      shape: LINE
+      range: 15.0
+      width: 3.0
+      speed: 1.0
+      particle: CRIT
+    action:
+      - type: EFFECT
+        target: ATTACKER
+        effects:
+          - potion: SPEED
+            amplifier: 0
+            duration: 2
+      - type: EFFECT
+        target: VICTIM
+        effects:
+          - potion: SLOWNESS
+            amplifier: 1
+            duration: 3
+          - potion: NAUSEA
+            amplifier: 0
+            duration: 3

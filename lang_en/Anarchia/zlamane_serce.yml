@@ -1,0 +1,60 @@
+eid: 'zlamane_serce'
+settings:
+  chance: 1.0
+  cooldown: 5
+  visual: true
+  cooldownmessage: true
+  block-in-region: true
+item:
+  material: PRISMARINE_SHARD
+  name: '&5&lBroken Heart'
+  lore:
+    - '&8» &7This is an item from:'
+    - '&8» &fthe Valentine''s event (2025)'
+    - ''
+    - '&8» &7Strike an enemy with it to'
+    - '&8» &7break their &dlittle heart!&7'
+    - ' '
+  model-data: 10133
+  usage: 1
+  unbreakable: true
+  glow: true
+  attributes:
+    - type: GENERIC_ATTACK_DAMAGE
+      amount: 1.0
+      slot: HAND
+  enchants:
+    unbreaking: 1
+sound:
+  enabled: true
+  type: 'ENTITY_PLAYER_HURT'
+particles:
+  enabled: true
+  type: 'HEART'
+titles:
+  damager:
+    enabled: true
+    title: ""
+    subtitle: "<gray>You broke a player's <light_purple>heart"
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+  victim:
+    enabled: true
+    title: ""
+    subtitle: "<gray>Your <light_purple>little heart <gray>was broken!"
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+abilities:
+  'HIT_ENTITY':
+    action:
+      - type: EFFECT
+        target: VICTIM
+        effects:
+          - potion: SLOWNESS
+            amplifier: 1
+            duration: 12
+          - potion: SLOW_FALLING
+            amplifier: 1
+            duration: 12

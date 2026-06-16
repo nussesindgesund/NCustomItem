@@ -1,0 +1,55 @@
+id: 'plecak_drakuli'
+settings:
+  cooldown: 0
+  visual: false
+  cooldownmessage: false
+  block-in-region: false
+item:
+  material: RED_BUNDLE
+  name: '&c&lDracula''s Backpack'
+  lore:
+    - '&8» &7Item from the &fHalloween 2025 event&7!'
+    - ''
+    - '&8» &7Opens a portable &dbackpack &7with &e5 slots&7!.'
+    - '&8» &7The contents are saved on &dthis specific item&7.'
+    - '&8» &7Editing the contents during &ccombat &7is blocked.'
+    - '&8» &7The item is &anot lost on death&7!'
+    - ''
+  model-data: 0
+  usage: -1
+  unbreakable: true
+  glow: true
+  attributes:
+    - type: GENERIC_ATTACK_DAMAGE
+      amount: 1.0
+      slot: HAND
+  enchants:
+    unbreaking: 1
+sound:
+  enabled: true
+  type: 'BLOCK_BUNDLE_INSERT'
+titles:
+  damager:
+    enabled: false
+    title: ""
+    subtitle: ""
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+  victim:
+    enabled: false
+    title: ""
+    subtitle: ""
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+abilities:
+  'RIGHT_CLICK':
+    action:
+      - type: BACKPACK
+        gui:
+          title: "Plecak Drakuli"
+          rows: 1
+        storage-key: "plecak_drakuli_items"
+        pickup-on-kill:
+          enabled: false

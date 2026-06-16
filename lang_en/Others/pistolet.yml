@@ -1,0 +1,67 @@
+id: 'pistolet'
+settings:
+  chance: 1.0
+  cooldown: 3
+  visual: true
+  cooldownmessage: true
+  block-in-region: true
+item:
+  material: BLAZE_ROD
+  name: "<#AAAAAA><bold>ᴘɪꜱᴛᴏʟ</bold>"
+  lore:
+    - ' <#444444>· <#CCCCCC>Fires a beam of particles up to <#FFFFFF>25 blocks<#CCCCCC> away.'
+    - ' <#444444>· <#CCCCCC>The hit player takes <#FF5555>8 damage <#CCCCCC>and is knocked back.'
+    - ' <#444444>· <#777777>ᴄᴏᴏʟᴅᴏᴡɴ <#444444>· <#CCCCCC>Wait <#FFFFFF>3 seconds<#CCCCCC> to shoot again.'
+    - ' <#444444>· <#777777>ʀᴀʀɪᴛʏ <#444444>· <#CCCCCC>Pack of <#FFFFFF>4<#CCCCCC>.'
+    - ' <#444444>· <#777777>ᴜꜱᴀɢᴇ <#444444>· <#CCCCCC>Click <#FFFFFF>RMB<#CCCCCC> to shoot.'
+  model-data: 10149
+  usage: -1
+  unbreakable: true
+  glow: true
+  attributes:
+    - type: GENERIC_ATTACK_DAMAGE
+      amount: 1.0
+      slot: HAND
+  enchants:
+    unbreaking: 1
+sound:
+  enabled: true
+  type: 'ENTITY_GENERIC_EXPLODE'
+particles:
+  enabled: true
+  type: 'CRIT'
+titles:
+  damager:
+    enabled: false
+    title: ""
+    subtitle: ""
+    fadeIn: 10
+    stay: 30
+    fadeOut: 10
+  victim:
+    enabled: true
+    title: "<#AAAAAA><bold>ʜɪᴛ</bold>"
+    subtitle: "<#444444>· <#AAAAAA>You were shot by a pistol <#444444>·"
+    fadeIn: 5
+    stay: 30
+    fadeOut: 10
+abilities:
+  'RIGHT_CLICK_PARTICLES_SHOT':
+    settings:
+      particle: CRIT
+      max-distance: 25.0
+      magazine: 30
+    action:
+      - type: DAMAGE
+        target: VICTIM
+        amount: 8.0
+      - type: KNOCK
+        target: VICTIM
+        power: 1.5
+        vertical: 0.4
+  'LEFT_CLICK_PARTICLES_SHOT':
+    settings:
+      particle: CRIT
+      max-distance: 25.0
+      magazine: 30
+    action: []

@@ -1,0 +1,64 @@
+id: 'rog_jednorozca'
+settings:
+  chance: 1.0
+  cooldown: 120
+  visual: true
+  cooldownmessage: true
+  block-in-region: true
+item:
+  material: GOAT_HORN
+  name: "<#FFAAFF><bold>ᴜɴɪᴄᴏʀɴ ʜᴏʀɴ</bold>"
+  lore:
+    - ' <#444444>· <#CCCCCC>Summons a <#FFFFFF>white unicorn <#CCCCCC>to ride.'
+    - ' <#444444>· <#CCCCCC>While riding, it <#FFFFFF>breaks blocks <#CCCCCC>in your path and <#FFFFFF>stuns <#CCCCCC>enemies.'
+    - ' <#444444>· <#777777>ʀᴀʀɪᴛʏ <#444444>· <#CCCCCC>Valentine''s Day 2026 <#444444>· <#FFAAFF>0.38%<#CCCCCC>.'
+    - ' <#444444>· <#777777>ᴜꜱᴀɢᴇ <#444444>· <#FF5555>Single-use<#CCCCCC>. Click <#FFFFFF>RMB<#CCCCCC> to summon.'
+  model-data: 10100
+  usage: 1
+  unbreakable: true
+  glow: true
+  attributes:
+    - type: GENERIC_ATTACK_DAMAGE
+      amount: 1.0
+      slot: HAND
+  enchants:
+    unbreaking: 1
+sound:
+  enabled: true
+  type: 'ENTITY_HORSE_AMBIENT'
+particles:
+  enabled: true
+  type: 'HEART'
+titles:
+  damager:
+    enabled: true
+    title: "<#FFAAFF><bold>ᴜɴɪᴄᴏʀɴ ʜᴏʀɴ</bold>"
+    subtitle: "<#444444>· <#AAAAAA>The unicorn has been summoned <#444444>·"
+    fadeIn: 10
+    stay: 60
+    fadeOut: 10
+  victim:
+    enabled: true
+    title: "<#FFAAFF><bold>ᴜɴɪᴄᴏʀɴ</bold>"
+    subtitle: "<#444444>· <#AAAAAA>You were trampled and stunned <#444444>·"
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+abilities:
+  'RIGHT_CLICK':
+    action:
+      - type: UNICORN_HORN
+        duration: 30
+        hit-radius: 2.5
+        speed: 0.5
+        jump: 1.0
+        stun-duration: 3
+        break-blocks: true
+        display-name: "<white><bold>Jednorożec"
+        show-name: true
+        max-health: 40.0
+        excluded:
+          - BEDROCK
+          - BARRIER
+          - END_PORTAL_FRAME
+          - OBSIDIAN

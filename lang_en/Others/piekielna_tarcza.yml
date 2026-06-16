@@ -1,0 +1,52 @@
+id: 'piekielna_tarcza'
+settings:
+  chance: 1.0
+  cooldown: 0
+  visual: false
+  cooldownmessage: true
+  block-in-region: true
+item:
+  material: SHIELD
+  name: '&6Hellish Shield'
+  lore:
+    - '&8» &7Has a &f25% chance &7to reflect'
+    - '&8» &can enemy''s &7attack!'
+    - ''
+  model-data: 10137
+  usage: -1
+  unbreakable: true
+  glow: true
+  attributes:
+    - type: GENERIC_ATTACK_DAMAGE
+      amount: 1.0
+      slot: HAND
+  enchants:
+    unbreaking: 1
+sound:
+  enabled: true
+  type: 'ITEM_FLINTANDSTEEL_USE'
+particles:
+  enabled: true
+  type: 'SOUL_FIRE_FLAME'
+titles:
+  damager:
+    enabled: true
+    title: "<red><bold>Hellish Shield"
+    subtitle: "<white>You reflected the player's blow!"
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+  victim:
+    enabled: true
+    title: "<red><bold>Hellish Shield"
+    subtitle: "<white>The player <white>reflected your blow!"
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+abilities:
+  'RECEIVE_DAMAGE':
+    action:
+      - type: REFLECT_DAMAGE
+        chance: 0.25
+        reflect-percent: 100.0
+        min-damage: 2.0

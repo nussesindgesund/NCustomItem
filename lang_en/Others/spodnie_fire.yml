@@ -1,0 +1,53 @@
+id: 'spodnie_fire'
+settings:
+  chance: 1.0
+  cooldown: 0
+  visual: false
+  cooldownmessage: false
+  block-in-region: true
+item:
+  material: IRON_LEGGINGS
+  name: "<#FFAA00><bold>ꜰɪʀᴇᴘʀᴏᴏꜰ ʟᴇɢɢɪɴɢꜱ</bold>"
+  lore:
+    - ' <#444444>· <#CCCCCC>While worn, passively grant <#FFAA00>Fire Resistance<#CCCCCC>.'
+    - ' <#444444>· <#777777>ᴀᴄᴛɪᴠᴀᴛɪᴏɴ <#444444>· <#CCCCCC>Equip on your <#FFFFFF>legs<#CCCCCC> for them to work.'
+  model-data: 0
+  usage: -1
+  unbreakable: true
+  glow: true
+  attributes:
+    - type: GENERIC_ATTACK_DAMAGE
+      amount: 1.0
+      slot: HAND
+  enchants:
+    unbreaking: 1
+sound:
+  enabled: false
+  type: 'BLOCK_AMETHYST_BLOCK_CHIME'
+particles:
+  enabled: false
+  type: 'CLOUD'
+titles:
+  damager:
+    enabled: false
+    title: ""
+    subtitle: ""
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+  victim:
+    enabled: false
+    title: ""
+    subtitle: ""
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+abilities:
+  'PASSIVE_LEGGINGS':
+    action:
+      - type: EFFECT
+        target: ATTACKER
+        effects:
+          - potion: fire_resistance
+            amplifier: 0
+            duration: 4

@@ -1,0 +1,69 @@
+id: 'excalibur'
+settings:
+  chance: 1.0
+  cooldown: 0
+  visual: true
+  cooldownmessage: false
+  block-in-region: false
+item:
+  material: NETHERITE_SWORD
+  name: "<#FFFF55><bold>ᴇxᴄᴀʟɪʙᴜʀ</bold>"
+  lore:
+    - ' <#444444>· <#777777>ᴅᴀᴍᴀɢᴇ <#444444>· <#CCCCCC>Base <#FFFFFF>11.5 ❤<#CCCCCC>.'
+    - ' <#444444>· <#777777>ᴋɪʟʟꜱ <#444444>· <#FFAA00>[VALUE] <#444444>/ <#FFFF55>1000<#CCCCCC>.'
+    - ''
+    - ' <#444444>· <#777777>ᴜᴘɢʀᴀᴅᴇ <#444444>· <#CCCCCC>After <#FFFF55>1000 kills<#CCCCCC>:'
+    - '   <#444444>· <#CCCCCC>Bonus <#FFFFFF>+12 dmg <#CCCCCC>(like <#FFFFFF>Sharpness VII<#CCCCCC>).'
+    - '   <#444444>· <#CCCCCC>Works <#FFFFFF>passively in hand<#CCCCCC>.'
+    - ''
+    - ' <#444444>· <#777777>ᴅʀᴏᴘ <#444444>· <#CCCCCC>Summer 2024 <#444444>· <#FFFF55>0.77%<#CCCCCC>.'
+  model-data: 10106
+  usage: -1
+  unbreakable: true
+  glow: true
+  enchants:
+    SHARPNESS: 7
+    UNBREAKING: 5
+    FIRE_ASPECT: 3
+    LOOTING: 5
+    MENDING: 1
+  attributes:
+    - type: GENERIC_ATTACK_DAMAGE
+      amount: 1.0
+      slot: HAND
+sound:
+  enabled: true
+  type: 'ENTITY_PLAYER_LEVELUP'
+titles:
+  damager:
+    enabled: false
+    title: ""
+    subtitle: ""
+    fadeIn: 10
+    stay: 30
+    fadeOut: 10
+  victim:
+    enabled: false
+    title: ""
+    subtitle: ""
+    fadeIn: 10
+    stay: 30
+    fadeOut: 10
+abilities:
+  'KILL':
+    action:
+      - type: KILL_COUNTER
+        id: tier1
+        lore-label: 'Tier 1'
+        threshold: 1000
+        upgrade:
+          - type: SHARPNESS
+            level: 7
+          - type: UNBREAKING
+            level: 5
+          - type: FIRE_ASPECT
+            level: 3
+          - type: LOOTING
+            level: 5
+          - type: MENDING
+            level: 1

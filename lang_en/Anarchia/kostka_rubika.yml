@@ -1,0 +1,52 @@
+id: 'kostka_rubika'
+settings:
+  chance: 1.0
+  cooldown: 0
+  visual: true
+  cooldownmessage: false
+  block-in-region: true
+item:
+  material: COMPARATOR
+  name: '&e&lRubik''s Cube'
+  lore:
+    - '&8» &7The Rubik''s Cube was obtainable'
+    - '&8» &7in &f2024 &7during &aChildren''s Day'
+    - ''
+    - '&8» &7Hit a player to have their inventory'
+    - '&8» &7get &fshuffled!'
+    - ''
+  model-data: 0
+  usage: 1
+  unbreakable: false
+  glow: true
+  attributes:
+    - type: GENERIC_ATTACK_DAMAGE
+      amount: 1.0
+      slot: HAND
+  enchants:
+    unbreaking: 1
+sound:
+  enabled: true
+  type: 'BLOCK_NOTE_BLOCK_PLING'
+particles:
+  enabled: true
+  type: 'VILLAGER_HAPPY'
+titles:
+  damager:
+    enabled: true
+    title: "<yellow><bold>Rubik's Cube"
+    subtitle: "<white>You shuffled the player's inventory!"
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+  victim:
+    enabled: true
+    title: "<yellow><bold>Rubik's Cube"
+    subtitle: "<white>A player <white>shuffled your hotbar!"
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+abilities:
+  'HIT_ENTITY':
+    action:
+      - type: HOTBAR_SHUFFLE

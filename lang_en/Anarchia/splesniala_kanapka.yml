@@ -1,0 +1,57 @@
+id: 'splesniala_kanapka'
+settings:
+  chance: 1.0
+  cooldown: 15
+  visual: true
+  cooldownmessage: true
+  block-in-region: true
+item:
+  material: BREAD
+  name: '&2&lMouldy Sandwich'
+  lore:
+    - '&8» &7This is an item obtained from'
+    - '&8» &fthe school event 2024&7!'
+    - ''
+    - '&8» &7When you hit an enemy'
+    - '&8» &7you infect them with a &adisease&7!'
+    - ''
+  model-data: 10146
+  usage: 1
+  unbreakable: false
+  glow: false
+  attributes:
+    - type: GENERIC_ATTACK_DAMAGE
+      amount: 1.0
+      slot: HAND
+  enchants:
+    unbreaking: 1
+sound:
+  enabled: true
+  type: 'ENTITY_PLAYER_BURP'
+particles:
+  enabled: true
+  type: 'SPELL_MOB'
+titles:
+  damager:
+    enabled: true
+    title: "<dark_green><bold>Mouldy Sandwich"
+    subtitle: "<green>You infected the player"
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+  victim:
+    enabled: true
+    title: "<dark_green><bold>Mouldy Sandwich"
+    subtitle: "<green>You were infected by"
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+abilities:
+  'HIT_ENTITY':
+    action:
+      - type: EFFECT
+        target: VICTIM
+        effects:
+          - potion: GLOWING
+            amplifier: 1
+            duration: 30

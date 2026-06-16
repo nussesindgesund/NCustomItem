@@ -1,0 +1,54 @@
+id: 'piekielny_miecz'
+settings:
+  chance: 1.0
+  cooldown: 30
+  visual: true
+  cooldownmessage: true
+  block-in-region: true
+item:
+  material: NETHERITE_SWORD
+  name: "<#FF5555><bold>ʜᴇʟʟɪꜱʜ ꜱᴡᴏʀᴅ</bold>"
+  lore:
+    - ' <#444444>· <#CCCCCC>Hitting an enemy <#FF5555>sets them ablaze with hellfire<#CCCCCC>.'
+    - ' <#444444>· <#CCCCCC>The flame <#FFFFFF>ignores fire resistance<#CCCCCC>. Lasts <#FFFFFF>6 seconds<#CCCCCC>.'
+    - ' <#444444>· <#777777>ʀᴀʀɪᴛʏ <#444444>· <#CCCCCC>Drop chance <#FF5555>0.02%<#CCCCCC>.'
+    - ' <#444444>· <#777777>ᴜꜱᴀɢᴇ <#444444>· <#CCCCCC>Hit a player with <#FFFFFF>LMB<#CCCCCC> to ignite them.'
+  model-data: 10134
+  usage: -1
+  unbreakable: true
+  glow: true
+  attributes:
+    - type: GENERIC_ATTACK_DAMAGE
+      amount: 1.0
+      slot: HAND
+  enchants:
+    unbreaking: 1
+sound:
+  enabled: true
+  type: 'ITEM_FLINTANDSTEEL_USE'
+particles:
+  enabled: true
+  type: 'SOUL_FIRE_FLAME'
+titles:
+  damager:
+    enabled: true
+    title: "<#FF5555><bold>ʜᴇʟʟɪꜱʜ ꜱᴡᴏʀᴅ</bold>"
+    subtitle: "<#444444>· <#AAAAAA>The enemy is burning with hellfire <#444444>·"
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+  victim:
+    enabled: true
+    title: "<#FF5555><bold>ʜᴇʟʟꜰɪʀᴇ</bold>"
+    subtitle: "<#444444>· <#AAAAAA>Fire resistance won't help <#444444>·"
+    fadeIn: 10
+    stay: 50
+    fadeOut: 10
+abilities:
+  'HIT_ENTITY':
+    action:
+      - type: HELLFIRE_BURN
+        target: VICTIM
+        duration: 6
+        damage-per-tick: 1.0
+        interval-ticks: 20

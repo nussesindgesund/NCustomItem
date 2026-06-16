@@ -1,0 +1,69 @@
+id: 'ognista_aura'
+settings:
+  chance: 1.0
+  cooldown: 20
+  visual: true
+  cooldownmessage: true
+  block-in-region: true
+item:
+  material: BLAZE_POWDER
+  name: "<#FF7700><bold>ꜰɪᴇʀʏ ᴀᴜʀᴀ</bold>"
+  lore:
+    - ' <#444444>· <#CCCCCC>Spreads a <#FF7700>wave of fire <#CCCCCC>around you within a <#FFFFFF>6 block<#CCCCCC> radius.'
+    - ' <#444444>· <#CCCCCC>For you: <#FF7700>Speed II<#CCCCCC>. For enemies: <#FF7700>Slowness III <#CCCCCC>and <#FF7700>Blindness<#CCCCCC>.'
+    - ' <#444444>· <#777777>ᴄᴏᴏʟᴅᴏᴡɴ <#444444>· <#CCCCCC>Wait <#FFFFFF>20 seconds<#CCCCCC> to use again.'
+    - ' <#444444>· <#777777>ᴜꜱᴀɢᴇ <#444444>· <#CCCCCC>Click <#FFFFFF>RMB<#CCCCCC> to activate.'
+  model-data: 0
+  usage: -1
+  unbreakable: true
+  glow: true
+  attributes:
+    - type: GENERIC_ATTACK_DAMAGE
+      amount: 1.0
+      slot: HAND
+  enchants:
+    unbreaking: 1
+sound:
+  enabled: true
+  type: 'ENTITY_BLAZE_SHOOT'
+particles:
+  enabled: false
+  type: 'FLAME'
+titles:
+  damager:
+    enabled: true
+    title: "<#FF7700><bold>ꜰɪᴇʀʏ ᴀᴜʀᴀ</bold>"
+    subtitle: "<#444444>· <#AAAAAA>A wave of fire spread around you <#444444>·"
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+  victim:
+    enabled: true
+    title: "<#FF7700><bold>ꜰɪᴇʀʏ ᴀᴜʀᴀ</bold>"
+    subtitle: "<#444444>· <#AAAAAA>You were hit by a wave of fire <#444444>·"
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+abilities:
+  'RIGHT_CLICK_WAVES':
+    settings:
+      shape: RING
+      range: 6.0
+      speed: 1.0
+      particle: FLAME
+    action:
+      - type: EFFECT
+        target: ATTACKER
+        effects:
+          - potion: SPEED
+            amplifier: 1
+            duration: 3
+      - type: EFFECT
+        target: VICTIM
+        effects:
+          - potion: SLOWNESS
+            amplifier: 2
+            duration: 3
+          - potion: BLINDNESS
+            amplifier: 0
+            duration: 3
