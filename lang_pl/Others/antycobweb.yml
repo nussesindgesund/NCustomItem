@@ -1,0 +1,51 @@
+id: 'antycobweb'
+settings:
+  chance: 1.0
+  cooldown: 10
+  visual: true
+  cooldownmessage: true
+  block-in-region: true
+item:
+  material: SHEARS
+  name: "<#FFD700><bold>ɴᴏżʏᴄᴇ ᴘᴀᴊęᴄᴢʏɴʏ</bold>"
+  lore:
+    - ' <#444444>· <#CCCCCC>Usuwa <#EEEEEE>pajęczyny <#CCCCCC>w promieniu <#FFFFFF>2 bloków<#CCCCCC>.'
+    - ' <#444444>· <#777777>ᴜżʏᴄɪᴇ <#444444>· <#CCCCCC>Kliknij <#FFFFFF>PPM<#CCCCCC>, aby aktywować.'
+  model-data: 0
+  usage: -1
+  unbreakable: true
+  glow: false
+  attributes:
+    - type: GENERIC_ATTACK_DAMAGE
+      amount: 1.0
+      slot: HAND
+  enchants:
+    unbreaking: 1
+sound:
+  enabled: true
+  type: 'ENTITY_SHEEP_SHEAR'
+particles:
+  enabled: false
+  type: 'CLOUD'
+titles:
+  damager:
+    enabled: true
+    title: "<#FFD700><bold>ɴᴏżʏᴄᴇ ᴘᴀᴊęᴄᴢʏɴʏ</bold>"
+    subtitle: "<#444444>· <#AAAAAA>Usunięto <#FFFFFF>pajęczyny <#AAAAAA>w pobliżu <#444444>·"
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+  victim:
+    enabled: false
+    title: ""
+    subtitle: ""
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+abilities:
+  'RIGHT_CLICK':
+    action:
+      - type: BLOCK_REMOVER
+        radius: 2
+        blocks:
+          - COBWEB

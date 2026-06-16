@@ -1,0 +1,64 @@
+id: 'blok_widno'
+settings:
+  chance: 1.0
+  cooldown: 180
+  visual: true
+  cooldownmessage: true
+  block-in-region: true
+item:
+  material: SOUL_LANTERN
+  name: '&c&lBlok widmo'
+  lore:
+    - '&8» &7Jest to przedmiot zdobyty podczas:'
+    - '&8» &fDnia Dziecka 2025&7!'
+    - ''
+    - '&8» &7Po postawieniu na ziemi,'
+    - '&8» &7uwalnia &eenergię&7, która obniża'
+    - '&8» &fmaksymalny limit &7serc pobliskim'
+    - '&8» &7graczom na określony czas..'
+  model-data: 10104
+  usage: 1
+  unbreakable: true
+  glow: true
+  attributes:
+    - type: GENERIC_ATTACK_DAMAGE
+      amount: 1.0
+      slot: HAND
+  enchants:
+    unbreaking: 1
+sound:
+  enabled: true
+  type: 'ENTITY_WITHER_AMBIENT'
+particles:
+  enabled: true
+  type: 'SOUL_FIRE_FLAME'
+titles:
+  damager:
+    enabled: true
+    title: "<red>Blok widmo"
+    subtitle: "<gray>Osłabiłeś pobliskich <green>graczy!"
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+  victim:
+    enabled: true
+    title: "<red>Blok widmo"
+    subtitle: "<gray>Coś się dzieje z twoim zdrowiem..."
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+abilities:
+  'RIGHT_CLICK_REGION':
+    settings:
+      radius: 10.0
+    action:
+      - type: MAX_HEALTH_REDUCE
+        target: VICTIM
+        amount: 20.0
+        duration: 150
+      - type: EFFECT
+        target: VICTIM
+        effects:
+          - potion: WITHER
+            amplifier: 0
+            duration: 5

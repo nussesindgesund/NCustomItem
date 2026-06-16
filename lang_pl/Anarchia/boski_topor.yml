@@ -1,0 +1,71 @@
+id: 'boski_topor'
+settings:
+  chance: 1.0
+  cooldown: 120
+  visual: true
+  cooldownmessage: true
+  block-in-region: true
+item:
+  material: GOLDEN_AXE
+  name: '&b&lBoski topór'
+  lore:
+    - '&8» &7Jest to przedmiot z:'
+    - '&8» &fspecjalnego wydarzenia (2025)'
+    - ''
+    - '&8» &7Po &fkliknięciu &7prawym przyciskiem'
+    - '&8» &7aktywujesz &epotężną falę uderzeniową'
+    - '&8» &7która zapewna Tobie &cnieśmiertelność&7!'
+    - ' '
+  model-data: 10116
+  usage: 1
+  unbreakable: true
+  glow: true
+  attributes:
+    - type: GENERIC_ATTACK_DAMAGE
+      amount: 1.0
+      slot: HAND
+  enchants:
+    unbreaking: 1
+sound:
+  enabled: true
+  type: 'ENTITY_GENERIC_EXPLODE'
+particles:
+  enabled: true
+  type: 'FLASH'
+titles:
+  damager:
+    enabled: true
+    title: "<aqua><bold>Boski Topór"
+    subtitle: "<white>Jesteś nieśmiertelny przez <aqua>3 sekundy!"
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+  victim:
+    enabled: true
+    title: "<aqua><bold>Boski Topór"
+    subtitle: "<red>Gracz jest chwilowo nieśmiertelny!"
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+abilities:
+  'RIGHT_CLICK_WAVES':
+    settings:
+      shape: LINE        # fala kierunkowa przed graczem
+      range: 18.0
+      width: 4.0
+      speed: 1.2
+      particle: FLAME
+    action:
+      - type: EFFECT
+        target: VICTIM
+        effects:
+          - potion: SLOWNESS
+            amplifier: 2
+            duration: 4
+      - type: KNOCK
+        target: VICTIM
+        power: 2.5
+        vertical: 0.4
+      - type: INVINCIBILITY
+        target: ATTACKER
+        duration: 3

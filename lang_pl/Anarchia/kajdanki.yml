@@ -1,0 +1,56 @@
+id: 'kajdanki'
+settings:
+  chance: 1.0
+  cooldown: 20
+  visual: true
+  cooldownmessage: true
+  block-in-region: true
+item:
+  material: IRON_CHAIN
+  name: "<#AAAAAA><bold>ᴋᴀᴊᴅᴀɴᴋɪ</bold>"
+  lore:
+    - ' <#444444>· <#CCCCCC>Uderzając wroga <#FFFFFF>skuwasz go <#CCCCCC>na <#FFFF55>5 sekund<#CCCCCC>.'
+    - ' <#444444>· <#CCCCCC>Blokujesz użycie: <#FF55FF>Pereł<#CCCCCC>, <#FFAA00>Chorusów<#CCCCCC>, <#FFFFFF>Jajek<#CCCCCC>, <#FF5555>Fajerwerków<#CCCCCC>.'
+    - ' <#444444>· <#777777>ᴜżʏᴄɪᴇ <#444444>· <#FF5555>Jednorazowy<#CCCCCC>. Uderz gracza <#FFFFFF>LPM<#CCCCCC>, aby skuć.'
+  model-data: 10107
+  usage: 1
+  unbreakable: true
+  glow: true
+  attributes:
+    - type: GENERIC_ATTACK_DAMAGE
+      amount: 1.0
+      slot: HAND
+  enchants:
+    unbreaking: 1
+sound:
+  enabled: true
+  type: 'BLOCK_CHAIN_PLACE'
+particles:
+  enabled: true
+  type: 'CRIT'
+titles:
+  damager:
+    enabled: true
+    title: "<#AAAAAA><bold>ᴋᴀᴊᴅᴀɴᴋɪ</bold>"
+    subtitle: "<#444444>· <#AAAAAA>Wróg został skuty na <#FFFF55>5 sekund <#444444>·"
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+  victim:
+    enabled: true
+    title: "<#FF5555><bold>ꜱᴋᴜᴛʏ</bold>"
+    subtitle: "<#444444>· <#AAAAAA>Zablokowano: <#FF55FF>perły<#AAAAAA>, <#FFAA00>chorusy<#AAAAAA>, <#FFFFFF>jajka<#AAAAAA>, <#FF5555>fajerwerki <#444444>·"
+    fadeIn: 10
+    stay: 60
+    fadeOut: 10
+abilities:
+  'HIT_ENTITY':
+    action:
+      - type: BLOCK_ITEMS
+        target: VICTIM
+        duration: 5
+        materials:
+          - ENDER_PEARL
+          - CHORUS_FRUIT
+          - EGG
+          - FIREWORK_ROCKET

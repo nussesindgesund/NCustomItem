@@ -1,0 +1,60 @@
+eid: 'zlamane_serce'
+settings:
+  chance: 1.0
+  cooldown: 5
+  visual: true
+  cooldownmessage: true
+  block-in-region: true
+item:
+  material: PRISMARINE_SHARD
+  name: '&5&lZłamane serce'
+  lore:
+    - '&8» &7Jest to przedmiot z:'
+    - '&8» &feventu walentynkowego (2025)'
+    - ''
+    - '&8» &7Uderz nim w przeciwnika aby'
+    - '&8» &7złamać jego &dserduszko!&7'
+    - ' '
+  model-data: 10133
+  usage: 1
+  unbreakable: true
+  glow: true
+  attributes:
+    - type: GENERIC_ATTACK_DAMAGE
+      amount: 1.0
+      slot: HAND
+  enchants:
+    unbreaking: 1
+sound:
+  enabled: true
+  type: 'ENTITY_PLAYER_HURT'
+particles:
+  enabled: true
+  type: 'HEART'
+titles:
+  damager:
+    enabled: true
+    title: ""
+    subtitle: "<gray>Złamałeś <light_purple>serce <gray>gracza"
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+  victim:
+    enabled: true
+    title: ""
+    subtitle: "<gray>Twoje <light_purple>serduszko <gray>zostało złamane!"
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+abilities:
+  'HIT_ENTITY':
+    action:
+      - type: EFFECT
+        target: VICTIM
+        effects:
+          - potion: SLOWNESS
+            amplifier: 1
+            duration: 12
+          - potion: SLOW_FALLING
+            amplifier: 1
+            duration: 12

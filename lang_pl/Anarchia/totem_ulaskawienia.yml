@@ -1,0 +1,52 @@
+﻿id: 'totem_ulaskawienia'
+settings:
+  cooldown: 0
+  visual: false
+  cooldownmessage: false
+  block-in-region: true
+  allow-offhand: true
+item:
+  material: TOTEM_OF_UNDYING
+  name: '&5&lTotem ułaskawienia'
+  lore:
+    - '&8» &7Jest to przedmiot z:'
+    - '&8» &feventu halloween (2023)'
+    - ''
+    - '&8» &7Trzymając go po śmierci &dnie'
+    - '&8» &dstracisz &7swoich przedmiotów'
+    - ''
+  model-data: 0
+  usage: 1
+  unbreakable: false
+  glow: true
+  attributes:
+    - type: GENERIC_ATTACK_DAMAGE
+      amount: 1.0
+      slot: HAND
+  enchants:
+    unbreaking: 1
+sound:
+  enabled: false
+  type: 'ENTITY_TOTEM_USE'
+particles:
+  enabled: false
+  type: 'TOTEM'
+titles:
+  damager:
+    enabled: true
+    title: ""
+    subtitle: "<#03c2fc>Użyłeś totemu <white>ułaskawienia!"
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+  victim:
+    enabled: false
+    title: ""
+    subtitle: ""
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+abilities:
+  'SELF_DEATH':
+    action:
+      - type: SALVATION_TOTEM

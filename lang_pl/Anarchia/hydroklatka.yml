@@ -1,0 +1,58 @@
+﻿id: 'hydroklatka'
+settings:
+  cooldown: 60
+  visual: true
+  cooldownmessage: true
+  block-in-region: true
+item:
+  material: WATER_BUCKET
+  name: "<#55FFFF><bold>ʜʏᴅʀᴏᴋʟᴀᴛᴋᴀ</bold>"
+  lore:
+    - ' <#444444>· <#CCCCCC>Tworzy niezniszczalną <#55FFFF>klatkę z bloków <#CCCCCC>wokół celu.'
+    - ' <#444444>· <#CCCCCC>Więzi trafionego gracza przez <#FFFFFF>10 sekund<#CCCCCC>.'
+    - ' <#444444>· <#777777>ᴜżʏᴄɪᴇ <#444444>· <#CCCCCC>Kliknij <#FFFFFF>PPM <#CCCCCC>w stronę celu, aby aktywować.'
+  model-data: 0
+  usage: -1
+  unbreakable: true
+  glow: true
+  attributes:
+    - type: GENERIC_ATTACK_DAMAGE
+      amount: 1.0
+      slot: HAND
+  enchants:
+    unbreaking: 1
+sound:
+  enabled: true
+  type: 'BLOCK_WATER_AMBIENT'
+particles:
+  enabled: true
+  type: 'WATER_SPLASH'
+titles:
+  damager:
+    enabled: true
+    title: "<#55FFFF><bold>ʜʏᴅʀᴏᴋʟᴀᴛᴋᴀ</bold>"
+    subtitle: "<#444444>· <#AAAAAA>Przeciwnik został uwięziony w klatce <#444444>·"
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+  victim:
+    enabled: true
+    title: "<#55FFFF><bold>ʜʏᴅʀᴏᴋʟᴀᴛᴋᴀ</bold>"
+    subtitle: "<#444444>· <#AAAAAA>Zostałeś uwięziony na <#FFFFFF>10 sekund <#444444>·"
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+abilities:
+  'RIGHT_CLICK_ARROW':
+    settings:
+      projectile: SNOWBALL
+      speed: 2.0
+      require-player-hit: false
+    action:
+      - type: MAGIC_BUBBLE
+        target: ATTACKER
+        size: 3
+        cage-material: LIGHT_BLUE_STAINED_GLASS
+        fill-material: OAK_PLANKS
+        indestructible: true
+        duration: 10

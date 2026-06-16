@@ -1,0 +1,54 @@
+id: miksturahaste
+settings:
+  chance: 1.0
+  cooldown: 60
+  visual: true
+  cooldownmessage: true
+  block-in-region: true
+item:
+  material: HONEY_BOTTLE
+  name: "<#FFBA00><bold>ᴍɪᴏᴅᴏᴡᴀ ᴍɪᴋꜱᴛᴜʀᴀ</bold>"
+  lore:
+    - ' <#444444>· <#CCCCCC>Daje efekt <#FFBA00>Pośpiechu III <#CCCCCC>na <#FFFFFF>8 sekund<#CCCCCC>.'
+    - ' <#444444>· <#777777>ᴄᴏᴏʟᴅᴏᴡɴ <#444444>· <#CCCCCC>Odczekaj <#FFFFFF>60 sekund<#CCCCCC>, aby użyć ponownie.'
+    - ' <#444444>· <#777777>ᴜżʏᴄɪᴇ <#444444>· <#CCCCCC>Kliknij <#FFFFFF>PPM<#CCCCCC>, aby wypić.'
+  model-data: 1111
+  usage: -1
+  unbreakable: true
+  glow: true
+  attributes:
+    - type: GENERIC_ATTACK_DAMAGE
+      amount: 1.0
+      slot: HAND
+  enchants:
+    unbreaking: 1
+sound:
+  enabled: true
+  type: ENTITY_GENERIC_DRINK
+particles:
+  enabled: false
+  type: CLOUD
+titles:
+  damager:
+    enabled: true
+    title: "<#FFBA00><bold>ᴍɪᴏᴅᴏᴡᴀ ᴍɪᴋꜱᴛᴜʀᴀ</bold>"
+    subtitle: "<#444444>· <#AAAAAA>Pośpiech III aktywny przez <#FFFFFF>8 sekund <#444444>·"
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+  victim:
+    enabled: false
+    title: ""
+    subtitle: ""
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+abilities:
+  RIGHT_CLICK:
+    action:
+      - type: EFFECT
+        target: ATTACKER
+        effects:
+          - potion: haste
+            amplifier: 2
+            duration: 8

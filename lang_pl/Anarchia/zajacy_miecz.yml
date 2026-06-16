@@ -1,0 +1,55 @@
+id: 'zajacy_miecz'
+settings:
+  chance: 1.0
+  cooldown: 60
+  visual: true
+  cooldownmessage: false
+  block-in-region: true
+item:
+  material: GOLDEN_SWORD
+  name: '&3&lZajęczy miecz'
+  lore:
+    - ''
+    - '&8» &7Jest to przedmiot z &fwydarzenia'
+    - '&8» &fwielkanocnego &7z &f2024 roku'
+    - ''
+    - '&8» &7Po uderzeniu przeciwnika blokuje'
+    - '&8» &7możliwość skakania na &f4 sekundy&7!'
+    - ''
+  model-data: 10140
+  usage: -1
+  unbreakable: true
+  glow: true
+  attributes:
+    - type: GENERIC_ATTACK_DAMAGE
+      amount: 1.0
+      slot: HAND
+  enchants:
+    unbreaking: 1
+sound:
+  enabled: true
+  type: 'ENTITY_RABBIT_JUMP'
+particles:
+  enabled: true
+  type: 'TOTEM'
+titles:
+  damager:
+    enabled: true
+    title: "<dark_aqua><bold>Zajęczy miecz"
+    subtitle: "<white>Zablokowałeś skakanie dla"
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+  victim:
+    enabled: true
+    title: "<dark_aqua><bold>Zajęczy miecz"
+    subtitle: "<white>Przeciwnik zablokował tobie <dark_aqua>skakanie!"
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+abilities:
+  'HIT_ENTITY':
+    action:
+      - type: STUN
+        target: VICTIM
+        duration: 4

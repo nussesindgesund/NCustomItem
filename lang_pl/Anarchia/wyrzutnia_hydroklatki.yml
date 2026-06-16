@@ -1,0 +1,62 @@
+id: 'wyrzutnia_hydroklatki'
+settings:
+  chance: 1.0
+  cooldown: 300
+  visual: true
+  cooldownmessage: true
+  block-in-region: true
+item:
+  material: CROSSBOW
+  name: '&3&lWyrzutnia Hydro Klatki'
+  lore:
+    - '&8» &7Jest to przedmiot zdobyty podczas'
+    - '&8» &fwydarzenia wakacyjnego 2025&7!'
+    - ''
+    - '&8» &7Po użyciu wystrzeliwuje pocisk, który'
+    - '&8» &7tworzy &3wodną klatkę &7uwięziającą'
+    - '&8» &7przeciwników w miejscu!'
+  model-data: 10122
+  usage: 1
+  unbreakable: true
+  glow: true
+  attributes:
+    - type: GENERIC_ATTACK_DAMAGE
+      amount: 1.0
+      slot: HAND
+  enchants:
+    unbreaking: 1
+sound:
+  enabled: true
+  type: 'ITEM_CROSSBOW_SHOOT'
+particles:
+  enabled: true
+  type: 'WATER_SPLASH'
+titles:
+  damager:
+    enabled: true
+    title: "<dark_aqua>Hydro Klatka"
+    subtitle: "<white>Stworzono <dark_aqua>hydro klatkę!"
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+  victim:
+    enabled: false
+    title: ""
+    subtitle: ""
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+abilities:
+  'RIGHT_CLICK_ARROW':
+    settings:
+      projectile: SNOWBALL
+      speed: 2.0
+      require-player-hit: true
+    action:
+      - type: MAGIC_BUBBLE
+        target: VICTIM
+        size: 5
+        duration: 8
+        cage-material: LIGHT_BLUE_STAINED_GLASS
+        fill-material: OAK_PLANKS
+        indestructible: true

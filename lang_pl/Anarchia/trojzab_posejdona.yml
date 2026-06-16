@@ -1,0 +1,73 @@
+id: 'trojzab_posejdona'
+settings:
+  chance: 1.0
+  cooldown: 20
+  visual: true
+  cooldownmessage: true
+  block-in-region: true
+item:
+  material: TRIDENT
+  name: '&3&lTrójząb Posejdona'
+  lore:
+    - '&8» &7Jest to przedmiot zdobyty podczas'
+    - '&8» &fwydarzenia wakacyjnego 2025&7!'
+    - ''
+    - '&8» &7Po rzuceniu trójzebem w miejsce'
+    - '&8» &7uderzenia &buderza piorun&7, który'
+    - '&8» &7zadaje obrażenia i odpycha'
+    - '&8» &7pobliskich przeciwników!'
+    - ''
+    - '&8» &7Klikając &fSHIFT &7możesz się'
+    - '&8» &7wystrzelić w dowolnym miejscu!'
+  model-data: 10118
+  usage: -1
+  unbreakable: true
+  glow: true
+  enchants:
+    unbreaking: 1
+    loyalty: 3
+  attributes:
+    - type: GENERIC_ATTACK_DAMAGE
+      amount: 1.0
+      slot: HAND
+sound:
+  enabled: true
+  type: 'ITEM_TRIDENT_HIT'
+particles:
+  enabled: true
+  type: 'WATER_SPLASH'
+titles:
+  damager:
+    enabled: true
+    title: ""
+    subtitle: "<gray>Przywołano cios <white>piorunem <gray>z trójzęba!"
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+  victim:
+    enabled: true
+    title: ""
+    subtitle: "<gray>Otrzymałeś cios <white>piorunem <gray>z trójzęba!"
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+abilities:
+  'TRIDENT_HIT':
+    settings:
+      radius: 5.0
+    action:
+      - type: LIGHTNING_STRIKE
+        target: VICTIM
+        effect-only: false
+        damage-bonus: 2.0
+      - type: KNOCK
+        target: VICTIM
+        power: 2.0
+        vertical: 0.4
+  'SNEAK_RIGHT_CLICK':
+    action:
+      - type: DASH
+        target: ATTACKER
+        power: 3.0
+        vertical-boost: 0.3
+        reset-fall: true

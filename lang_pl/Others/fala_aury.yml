@@ -1,0 +1,70 @@
+id: 'fala_aury'
+settings:
+  chance: 1.0
+  cooldown: 15
+  visual: true
+  cooldownmessage: true
+  block-in-region: true
+item:
+  material: WIND_CHARGE
+  name: "<#55FFFF><bold>ꜰᴀʟᴀ ᴀᴜʀʏ</bold>"
+  lore:
+    - ' <#444444>· <#CCCCCC>Wysyła <#55FFFF>falę <#CCCCCC>przed siebie, trafiając wrogów.'
+    - ' <#444444>· <#CCCCCC>Trafieni wrogowie otrzymują efekty spowolnienia i mdłości.'
+    - ' <#444444>· <#777777>ᴄᴏᴏʟᴅᴏᴡɴ <#444444>· <#CCCCCC>Odczekaj <#FFFFFF>15 sekund<#CCCCCC>, aby użyć ponownie.'
+    - ' <#444444>· <#777777>ᴜżʏᴄɪᴇ <#444444>· <#CCCCCC>Kliknij <#FFFFFF>PPM<#CCCCCC>, aby aktywować.'
+  model-data: 0
+  usage: -1
+  unbreakable: true
+  glow: true
+  attributes:
+    - type: GENERIC_ATTACK_DAMAGE
+      amount: 1.0
+      slot: HAND
+  enchants:
+    unbreaking: 1
+sound:
+  enabled: true
+  type: 'ENTITY_BREEZE_WIND_BURST'
+particles:
+  enabled: false
+  type: 'CLOUD'
+titles:
+  damager:
+    enabled: true
+    title: "<#55FFFF><bold>ꜰᴀʟᴀ ᴀᴜʀʏ</bold>"
+    subtitle: "<#444444>· <#AAAAAA>Fala wysłana przed ciebie <#444444>·"
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+  victim:
+    enabled: true
+    title: "<#55FFFF><bold>ꜰᴀʟᴀ ᴀᴜʀʏ</bold>"
+    subtitle: "<#444444>· <#AAAAAA>Zostałeś trafiony falą aury <#444444>·"
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+abilities:
+  'RIGHT_CLICK_WAVES':
+    settings:
+      shape: LINE
+      range: 15.0
+      width: 3.0
+      speed: 1.0
+      particle: CRIT
+    action:
+      - type: EFFECT
+        target: ATTACKER
+        effects:
+          - potion: SPEED
+            amplifier: 0
+            duration: 2
+      - type: EFFECT
+        target: VICTIM
+        effects:
+          - potion: SLOWNESS
+            amplifier: 1
+            duration: 3
+          - potion: NAUSEA
+            amplifier: 0
+            duration: 3
