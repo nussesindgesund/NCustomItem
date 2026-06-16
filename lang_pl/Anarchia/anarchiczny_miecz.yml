@@ -1,0 +1,55 @@
+id: 'anarchiczny_miecz'
+settings:
+  chance: 1.0
+  cooldown: 10
+  visual: true
+  cooldownmessage: true
+  block-in-region: true
+item:
+  material: NETHERITE_SWORD
+  name: '&4Anarchiczny miecz'
+  lore:
+    - ''
+    - '&8» &7Miecz dzięki któremu po kliknięciu na dane'
+    - '&8» &7miejsce pojawią się &f3x3 pajęczyny&7!'
+    - ''
+  model-data: 0
+  usage: -1
+  unbreakable: true
+  glow: true
+  attributes:
+    - type: GENERIC_ATTACK_DAMAGE
+      amount: 1.0
+      slot: HAND
+  enchants:
+    unbreaking: 1
+sound:
+  enabled: true
+  type: 'ENTITY_SPIDER_AMBIENT'
+particles:
+  enabled: false
+  type: 'CLOUD'
+titles:
+  damager:
+    enabled: true
+    title: "<dark_red>Anarchiczny miecz"
+    subtitle: "<white>Postawiłeś <red>cobweby!"
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+  victim:
+    enabled: false
+    title: ""
+    subtitle: ""
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+abilities:
+  'RIGHT_CLICK':
+    action:
+      - type: PLACE_BLOCK
+        material: COBWEB
+        width: 3
+        height: 1
+        range: 5
+        duration: 0

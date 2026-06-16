@@ -1,0 +1,58 @@
+id: 'nieskonczone_jablko'
+settings:
+  chance: 1.0
+  cooldown: 10
+  visual: true
+  cooldownmessage: true
+  block-in-region: true
+item:
+  material: GOLDEN_APPLE
+  name: "<#FFAA00><bold>ɴɪᴇꜱᴋᴏɴᴄᴢᴏɴᴇ ᴊᴀʙłᴋᴏ</bold>"
+  lore:
+    - ' <#444444>· <#CCCCCC>Po zjedzeniu daje efekty <#FFFFFF>bez konsumowania<#CCCCCC> jabłka.'
+    - ' <#444444>· <#CCCCCC>Nadaje <#FFAA00>Regenerację II <#CCCCCC>i <#FFAA00>Absorpcję <#CCCCCC>na chwilę.'
+    - ' <#444444>· <#777777>ᴄᴏᴏʟᴅᴏᴡɴ <#444444>· <#CCCCCC>Odczekaj <#FFFFFF>10 sekund<#CCCCCC>, aby użyć ponownie.'
+    - ' <#444444>· <#777777>ᴜżʏᴄɪᴇ <#444444>· <#CCCCCC>Zjedz jabłko, aby aktywować.'
+  model-data: 0
+  usage: -1
+  unbreakable: true
+  glow: true
+  attributes:
+    - type: GENERIC_ATTACK_DAMAGE
+      amount: 1.0
+      slot: HAND
+  enchants:
+    unbreaking: 1
+sound:
+  enabled: true
+  type: 'ENTITY_PLAYER_BURP'
+particles:
+  enabled: false
+  type: 'HEART'
+titles:
+  damager:
+    enabled: true
+    title: "<#FFAA00><bold>ɴɪᴇꜱᴋᴏɴᴄᴢᴏɴᴇ ᴊᴀʙłᴋᴏ</bold>"
+    subtitle: "<#444444>· <#AAAAAA>Regeneracja II i Absorpcja aktywne <#444444>·"
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+  victim:
+    enabled: false
+    title: ""
+    subtitle: ""
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+abilities:
+  'EAT':
+    action:
+      - type: EFFECT
+        target: ATTACKER
+        effects:
+          - potion: REGENERATION
+            amplifier: 1
+            duration: 4
+          - potion: ABSORPTION
+            amplifier: 0
+            duration: 120

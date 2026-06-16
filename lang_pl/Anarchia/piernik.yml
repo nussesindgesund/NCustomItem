@@ -1,0 +1,57 @@
+id: 'piernik'
+settings:
+  chance: 1.0
+  cooldown: 5
+  visual: true
+  cooldownmessage: false
+  block-in-region: false
+item:
+  material: COOKIE
+  name: '&6&lPiernik'
+  lore:
+    - '&8» &7Jest to przedmiot z:'
+    - '&8» &feventu świątecznego (2024)'
+    - ''
+    - '&8» &7Po zjedzeniu &epiernika &7otrzymujesz'
+    - '&8» &7efekt &aszybkości kopania 10&7!'
+    - ' '
+  model-data: 10130
+  usage: 1
+  unbreakable: false
+  glow: true
+  attributes:
+    - type: GENERIC_ATTACK_DAMAGE
+      amount: 1.0
+      slot: HAND
+  enchants:
+    unbreaking: 1
+sound:
+  enabled: true
+  type: 'ENTITY_PLAYER_BURP'
+particles:
+  enabled: false
+  type: 'CRIT'
+titles:
+  damager:
+    enabled: true
+    title: "<gold><bold>Pierniczek"
+    subtitle: "<yellow>Otrzymałeś efekt <gold>Haste 10!"
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+  victim:
+    enabled: false
+    title: ""
+    subtitle: ""
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+abilities:
+  'EAT':
+    action:
+      - type: EFFECT
+        target: ATTACKER
+        effects:
+          - potion: HASTE
+            amplifier: 9
+            duration: 300

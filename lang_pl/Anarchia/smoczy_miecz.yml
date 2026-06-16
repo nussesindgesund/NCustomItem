@@ -1,0 +1,53 @@
+id: 'smoczy_miecz'
+settings:
+  chance: 1.0
+  cooldown: 60
+  visual: true
+  cooldownmessage: true
+  block-in-region: true
+item:
+  material: NETHERITE_SWORD
+  name: '&d&lSmoczy miecz'
+  lore:
+    - ''
+    - '&8» &7Posiada on możliwość strzelania'
+    - '&8» &dperłami kresu'
+    - ''
+  model-data: 0
+  usage: -1
+  unbreakable: true
+  glow: true
+  attributes:
+    - type: GENERIC_ATTACK_DAMAGE
+      amount: 1.0
+      slot: HAND
+  enchants:
+    unbreaking: 1
+sound:
+  enabled: true
+  type: 'ENTITY_ENDER_DRAGON_FLAP'
+particles:
+  enabled: false
+  type: 'PORTAL'
+titles:
+  damager:
+    enabled: true
+    title: ""
+    subtitle: "<white>Użyłeś <#03c2fc>Smoczego miecza!"
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+  victim:
+    enabled: false
+    title: ""
+    subtitle: ""
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+abilities:
+  'RIGHT_CLICK':
+    action:
+      - type: LAUNCH_PROJECTILE
+        projectile: ENDER_PEARL
+        speed: 1.6
+        count: 1

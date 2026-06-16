@@ -1,0 +1,55 @@
+id: 'plecak_drakuli'
+settings:
+  cooldown: 0
+  visual: false
+  cooldownmessage: false
+  block-in-region: false
+item:
+  material: RED_BUNDLE
+  name: '&c&lPlecak Drakuli'
+  lore:
+    - '&8» &7Przedmiot z &fwydarzenia halloween 2025&7!'
+    - ''
+    - '&8» &7Otwiera przenośny &dplecak &7na &e5 slotów&7!.'
+    - '&8» &7Zawartość zapisywana jest w &dtym egzemplarzu&7.'
+    - '&8» &7Edytowanie zawartości podczas &cwalki &7jest zablokowane.'
+    - '&8» &7Przedmiot &anie traci się po śmierci&7!'
+    - ''
+  model-data: 0
+  usage: -1
+  unbreakable: true
+  glow: true
+  attributes:
+    - type: GENERIC_ATTACK_DAMAGE
+      amount: 1.0
+      slot: HAND
+  enchants:
+    unbreaking: 1
+sound:
+  enabled: true
+  type: 'BLOCK_BUNDLE_INSERT'
+titles:
+  damager:
+    enabled: false
+    title: ""
+    subtitle: ""
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+  victim:
+    enabled: false
+    title: ""
+    subtitle: ""
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+abilities:
+  'RIGHT_CLICK':
+    action:
+      - type: BACKPACK
+        gui:
+          title: "Plecak Drakuli"
+          rows: 1
+        storage-key: "plecak_drakuli_items"
+        pickup-on-kill:
+          enabled: false

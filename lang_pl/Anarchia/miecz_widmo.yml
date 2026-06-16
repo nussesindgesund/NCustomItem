@@ -1,0 +1,57 @@
+﻿id: 'item_miecz_widmo'
+settings:
+  cooldown: 0
+  visual: true
+  cooldownmessage: false
+  block-in-region: true
+item:
+  material: NETHERITE_SWORD
+  name: "<#555555><bold>ᴍɪᴇᴄᴢ ᴡɪᴅᴍᴏ</bold>"
+  lore:
+    - ' <#444444>· <#CCCCCC>Automatycznie odświeża <#FFFFFF>enchanty i opis <#CCCCCC>przy wejściu na serwer.'
+    - ' <#444444>· <#777777>ᴀᴋᴛʏᴡᴀᴄᴊᴀ <#444444>· <#CCCCCC>Działa <#FFFFFF>pasywnie <#CCCCCC>w ekwipunku.'
+  model-data: 10011
+  usage: -1
+  unbreakable: true
+  glow: true
+  attributes:
+    - type: GENERIC_ATTACK_DAMAGE
+      amount: 1.0
+      slot: HAND
+  enchants:
+    unbreaking: 1
+sound:
+  enabled: true
+  type: 'ENTITY_WITHER_AMBIENT'
+titles:
+  damager:
+    enabled: true
+    title: "<#555555><bold>ᴍɪᴇᴄᴢ ᴡɪᴅᴍᴏ</bold>"
+    subtitle: "<#444444>· <#AAAAAA>Enchanty i opis zostały odświeżone <#444444>·"
+    fadeIn: 10
+    stay: 50
+    fadeOut: 10
+  victim:
+    enabled: false
+    title: ""
+    subtitle: ""
+    fadeIn: 10
+    stay: 50
+    fadeOut: 10
+abilities:
+  'JOIN_SERVER':
+    action:
+      - type: REPLACE_ENCHANTS
+        enchantments:
+          - type: SHARPNESS
+            level: 10
+          - type: UNBREAKING
+            level: 5
+          - type: FIRE_ASPECT
+            level: 3
+          - type: LOOTING
+            level: 5
+          - type: SWEEPING_EDGE
+            level: 5
+          - type: MENDING
+            level: 1

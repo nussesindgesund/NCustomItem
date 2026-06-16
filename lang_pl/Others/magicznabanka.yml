@@ -1,0 +1,53 @@
+id: 'magicznabanka'
+settings:
+  chance: 1.0
+  cooldown: 60
+  visual: true
+  cooldownmessage: true
+  block-in-region: true
+item:
+  material: GLASS_BOTTLE
+  name: "<#55FFFF><bold>ᴍᴀɢɪᴄᴢɴᴀ ʙᴀɴᴋᴀ</bold>"
+  lore:
+    - ' <#444444>· <#CCCCCC>Tworzy wokół ciebie <#55FFFF>szklaną kopułę <#CCCCCC>ochronną.'
+    - ' <#444444>· <#777777>ᴄᴏᴏʟᴅᴏᴡɴ <#444444>· <#CCCCCC>Odczekaj <#FFFFFF>60 sekund<#CCCCCC>, aby użyć ponownie.'
+    - ' <#444444>· <#777777>ᴜżʏᴄɪᴇ <#444444>· <#CCCCCC>Kliknij <#FFFFFF>PPM<#CCCCCC>, aby aktywować.'
+  model-data: 0
+  usage: -1
+  unbreakable: true
+  glow: false
+  attributes:
+    - type: GENERIC_ATTACK_DAMAGE
+      amount: 1.0
+      slot: HAND
+  enchants:
+    unbreaking: 1
+sound:
+  enabled: true
+  type: 'BLOCK_GLASS_PLACE'
+particles:
+  enabled: false
+  type: 'CLOUD'
+titles:
+  damager:
+    enabled: true
+    title: "<#55FFFF><bold>ᴍᴀɢɪᴄᴢɴᴀ ʙᴀɴᴋᴀ</bold>"
+    subtitle: "<#444444>· <#AAAAAA>Szklana kopuła została aktywowana <#444444>·"
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+  victim:
+    enabled: false
+    title: ""
+    subtitle: ""
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+abilities:
+  'RIGHT_CLICK':
+    action:
+      - type: MAGIC_BUBBLE
+        target: ATTACKER
+        radius: 3
+        material: BLUE_STAINED_GLASS
+        y-offset: 1

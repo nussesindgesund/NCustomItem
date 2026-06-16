@@ -1,0 +1,52 @@
+id: 'tnt'
+settings:
+  chance: 1.0
+  cooldown: 60
+  visual: true
+  cooldownmessage: true
+  block-in-region: true
+item:
+  material: TNT
+  name: "<#FF5555><bold>ᴛɴᴛ</bold>"
+  lore:
+    - ' <#444444>· <#CCCCCC>Postawione zamienia się w <#FF5555>uzbrojone TNT <#CCCCCC>z promieniem wybuchu <#FFFFFF>8 bloków<#CCCCCC>.'
+    - ' <#444444>· <#777777>ᴄᴏᴏʟᴅᴏᴡɴ <#444444>· <#CCCCCC>Odczekaj <#FFFFFF>60 sekund<#CCCCCC>, aby użyć ponownie.'
+    - ' <#444444>· <#777777>ᴜżʏᴄɪᴇ <#444444>· <#CCCCCC>Postaw blok, aby uzbroić.'
+  model-data: 0
+  usage: -1
+  unbreakable: true
+  glow: false
+  attributes:
+    - type: GENERIC_ATTACK_DAMAGE
+      amount: 1.0
+      slot: HAND
+  enchants:
+    unbreaking: 1
+sound:
+  enabled: true
+  type: 'ENTITY_TNT_PRIMED'
+particles:
+  enabled: false
+  type: 'SMOKE'
+titles:
+  damager:
+    enabled: true
+    title: "<#FF5555><bold>ᴛɴᴛ</bold>"
+    subtitle: "<#444444>· <#AAAAAA>TNT zostało uzbrojone <#444444>·"
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+  victim:
+    enabled: false
+    title: ""
+    subtitle: ""
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+abilities:
+  'PLACE_BLOCK':
+    action:
+      - type: THROW_TNT
+        velocity: 0.1
+        fuse: 40
+        blast-radius: 8

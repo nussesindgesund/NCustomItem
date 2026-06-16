@@ -1,0 +1,58 @@
+id: 'roza_kupidyna'
+settings:
+  chance: 1.0
+  cooldown: 0
+  visual: false
+  cooldownmessage: false
+  block-in-region: false
+  allow-offhand: true
+item:
+  material: POPPY
+  name: "<#FF5555><bold>ʀóżᴀ ᴋᴜᴘɪᴅʏɴᴀ</bold>"
+  lore:
+    - ' <#444444>· <#CCCCCC>Trzymając w ręce nadaje pasywnie:'
+    - '   <#444444>· <#FF5555>+5 serc <#CCCCCC>maksymalnego życia.'
+    - '   <#444444>· <#55FFFF>Odporność I <#CCCCCC>stale.'
+    - '   <#444444>· <#FF5555>Regeneracja I <#CCCCCC>stale.'
+    - ' <#444444>· <#777777>ʀᴀʀɪᴛʏ <#444444>· <#CCCCCC>Walentynki <#FFFFFF>2024<#CCCCCC>.'
+    - ' <#444444>· <#777777>ᴀᴋᴛʏᴡᴀᴄᴊᴀ <#444444>· <#CCCCCC>Trzymaj w <#FFFFFF>głównej lub offhand<#CCCCCC>.'
+  model-data: 10132
+  usage: -1
+  unbreakable: true
+  glow: true
+  attributes:
+    - type: GENERIC_MAX_HEALTH
+      amount: 10.0
+      slot: ALL
+  enchants:
+    unbreaking: 1
+sound:
+  enabled: false
+  type: 'BLOCK_BEACON_AMBIENT'
+titles:
+  damager:
+    enabled: false
+    title: ""
+    subtitle: ""
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+  victim:
+    enabled: false
+    title: ""
+    subtitle: ""
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+abilities:
+  'PASSIVE_OFFHAND':
+    action:
+      - type: EFFECT
+        target: ATTACKER
+        effects:
+          - potion: RESISTANCE
+            amplifier: 0
+            duration: 4
+          - potion: REGENERATION
+            amplifier: 0
+            duration: 4

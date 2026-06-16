@@ -1,0 +1,56 @@
+id: 'luk_kupidyna'
+settings:
+  chance: 0.25
+  cooldown: 15
+  visual: true
+  cooldownmessage: false
+  block-in-region: true
+item:
+  material: BOW
+  name: '&4Łuk kupidyna'
+  lore:
+    - ''
+    - '&5&lSpecjalny przedmiot!'
+    - '&7Masz szanse, że trafiony przez'
+    - '&7Ciebie gracz zostaje &doślepiony!'
+    - ' '
+  model-data: 0
+  usage: -1
+  unbreakable: true
+  glow: true
+  attributes:
+    - type: GENERIC_ATTACK_DAMAGE
+      amount: 1.0
+      slot: HAND
+  enchants:
+    unbreaking: 1
+sound:
+  enabled: false
+  type: 'ENTITY_ARROW_SHOOT'
+particles:
+  enabled: false
+  type: 'HEART'
+titles:
+  damager:
+    enabled: true
+    title: ""
+    subtitle: "<white>Oślepiłeś gracza"
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+  victim:
+    enabled: true
+    title: ""
+    subtitle: "<white>Gracz <white>cię oślepił!"
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+abilities:
+  'PROJECTILE_HIT':
+    action:
+      - type: EFFECT
+        target: VICTIM
+        effects:
+          - potion: BLINDNESS
+            amplifier: 0
+            duration: 5

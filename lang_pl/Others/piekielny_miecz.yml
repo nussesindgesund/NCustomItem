@@ -1,0 +1,54 @@
+id: 'piekielny_miecz'
+settings:
+  chance: 1.0
+  cooldown: 30
+  visual: true
+  cooldownmessage: true
+  block-in-region: true
+item:
+  material: NETHERITE_SWORD
+  name: "<#FF5555><bold>ᴘɪᴇᴋɪᴇʟɴʏ ᴍɪᴇᴄᴢ</bold>"
+  lore:
+    - ' <#444444>· <#CCCCCC>Uderzając wroga <#FF5555>podpalasz go piekielnym ogniem<#CCCCCC>.'
+    - ' <#444444>· <#CCCCCC>Płomień <#FFFFFF>ignoruje odporność na ogień<#CCCCCC>. Trwa <#FFFFFF>6 sekund<#CCCCCC>.'
+    - ' <#444444>· <#777777>ʀᴀʀɪᴛʏ <#444444>· <#CCCCCC>Szansa dropu <#FF5555>0.02%<#CCCCCC>.'
+    - ' <#444444>· <#777777>ᴜżʏᴄɪᴇ <#444444>· <#CCCCCC>Uderz gracza <#FFFFFF>LPM<#CCCCCC>, aby podpalić.'
+  model-data: 10134
+  usage: -1
+  unbreakable: true
+  glow: true
+  attributes:
+    - type: GENERIC_ATTACK_DAMAGE
+      amount: 1.0
+      slot: HAND
+  enchants:
+    unbreaking: 1
+sound:
+  enabled: true
+  type: 'ITEM_FLINTANDSTEEL_USE'
+particles:
+  enabled: true
+  type: 'SOUL_FIRE_FLAME'
+titles:
+  damager:
+    enabled: true
+    title: "<#FF5555><bold>ᴘɪᴇᴋɪᴇʟɴʏ ᴍɪᴇᴄᴢ</bold>"
+    subtitle: "<#444444>· <#AAAAAA>Przeciwnik pali się piekielnym ogniem <#444444>·"
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+  victim:
+    enabled: true
+    title: "<#FF5555><bold>ᴘɪᴇᴋɪᴇʟɴʏ ᴏɢɪᴇɴ́</bold>"
+    subtitle: "<#444444>· <#AAAAAA>Odporność na ogień nie pomoże <#444444>·"
+    fadeIn: 10
+    stay: 50
+    fadeOut: 10
+abilities:
+  'HIT_ENTITY':
+    action:
+      - type: HELLFIRE_BURN
+        target: VICTIM
+        duration: 6
+        damage-per-tick: 1.0
+        interval-ticks: 20

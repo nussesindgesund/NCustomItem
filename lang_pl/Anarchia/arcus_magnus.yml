@@ -1,0 +1,61 @@
+id: 'arcus_magnus'
+settings:
+  chance: 1.0
+  cooldown: 8
+  visual: true
+  cooldownmessage: true
+  block-in-region: true
+item:
+  material: BOW
+  name: '&a&lArcus Magnus'
+  lore:
+    - '&8» &7Jest to przedmiot z:'
+    - '&8» &feventu halloween (2024)'
+    - ''
+    - '&8» &7Łuk, który pozwala na'
+    - '&8» &eniszczycielskie &7combo!'
+    - '&8» &7Po trafieniu przeciwnika'
+    - '&8» &7zadajesz mu &cogromne obrażenia&7, które'
+    - '&8» &7zwiększają się z każdym trafieniem!'
+    - ' '
+  model-data: 10119
+  usage: -1
+  unbreakable: true
+  glow: true
+  attributes:
+    - type: GENERIC_ATTACK_DAMAGE
+      amount: 1.0
+      slot: HAND
+  enchants:
+    unbreaking: 1
+sound:
+  enabled: true
+  type: 'ENTITY_ARROW_HIT_PLAYER'
+particles:
+  enabled: true
+  type: 'CRIT_MAGIC'
+titles:
+  damager:
+    enabled: true
+    title: "<green><bold>Arcus Magnus"
+    subtitle: "<green>Postrzeliłeś gracza"
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+  victim:
+    enabled: true
+    title: "<green><bold>Arcus Magnus"
+    subtitle: "<green>Postrzelono cię <dark_green>arcusem magnusem!"
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+abilities:
+  'RIGHT_CLICK_ARROW':
+    settings:
+      speed: 2.5
+      auto-load: false
+    action:
+      - type: ARROW_COMBO
+        count: 5
+        spread: 8.0
+        speed: 2.5

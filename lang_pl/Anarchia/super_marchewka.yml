@@ -1,0 +1,57 @@
+id: 'super_marchewka'
+settings:
+  chance: 1.0
+  cooldown: 90
+  visual: true
+  cooldownmessage: true
+  block-in-region: true
+item:
+  material: GOLDEN_CARROT
+  name: "<#FFAA00><bold>ꜱᴜᴘᴇʀ ɴɪᴇꜱᴋᴏɴᴄᴢᴏɴᴀ ᴍᴀʀᴄʜᴇᴡᴋᴀ</bold>"
+  lore:
+    - ' <#444444>· <#CCCCCC>Wchodzisz w <#FFFFFF>tryb GIGANTYCZNY <#CCCCCC>na <#FFAA00>30 sekund<#CCCCCC>.'
+    - ' <#444444>· <#CCCCCC>Zwiększa <#FFAA00>obrażenia <#CCCCCC>o <#FFFFFF>+5 <#CCCCCC>i <#FF5555>HP <#CCCCCC>o <#FFFFFF>+6 serc<#CCCCCC>.'
+    - ' <#444444>· <#777777>ʀᴀʀɪᴛʏ <#444444>· <#CCCCCC>Wielkanoc 2026 <#444444>· <#FFAA00>0.38%<#CCCCCC>.'
+    - ' <#444444>· <#777777>ᴜżʏᴄɪᴇ <#444444>· <#FF5555>Jednorazowa<#CCCCCC>. Kliknij <#FFFFFF>PPM<#CCCCCC>, aby aktywować.'
+  model-data: 10101
+  usage: 1
+  unbreakable: true
+  glow: true
+  attributes:
+    - type: GENERIC_ATTACK_DAMAGE
+      amount: 1.0
+      slot: HAND
+  enchants:
+    unbreaking: 1
+sound:
+  enabled: true
+  type: 'ENTITY_PLAYER_LEVELUP'
+particles:
+  enabled: true
+  type: 'TOTEM'
+titles:
+  damager:
+    enabled: true
+    title: "<#FFAA00><bold>ɢɪɢᴀɴᴛ</bold>"
+    subtitle: "<#444444>· <#AAAAAA>Tryb gigantyczny aktywny przez <#FFAA00>30 sekund <#444444>·"
+    fadeIn: 10
+    stay: 60
+    fadeOut: 10
+  victim:
+    enabled: false
+    title: ""
+    subtitle: ""
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+abilities:
+  'RIGHT_CLICK':
+    action:
+      - type: ATTRIBUTE
+        target: ATTACKER
+        duration: 30
+        attributes:
+          - type: GENERIC_ATTACK_DAMAGE
+            amount: 5.0
+          - type: GENERIC_MAX_HEALTH
+            amount: 12.0

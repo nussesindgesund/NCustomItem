@@ -1,0 +1,62 @@
+id: 'marchewkowa_kusza'
+settings:
+  chance: 1.0
+  cooldown: 60
+  visual: true
+  cooldownmessage: true
+  block-in-region: true
+item:
+  material: CROSSBOW
+  name: '&6&lMarchewkowa kusza'
+  lore:
+    - ''
+    - '&8» &7Jest to przedmiot z &fwielkanocnego'
+    - '&8» &fwydarzenia &7z &e2024 roku&7!'
+    - ''
+    - '&8» &7Ta &aniezwykła &7kusza zapewnia ci'
+    - '&8» &7zdumiewającą zdolność przyciągania'
+    - '&8» &7do siebie &egraczy&7, tworząc zupełnie'
+    - '&8» &7nowe możliwości eksploracji i walki!'
+    - ''
+  model-data: 10139
+  usage: -1
+  unbreakable: true
+  glow: true
+  attributes:
+    - type: GENERIC_ATTACK_DAMAGE
+      amount: 1.0
+      slot: HAND
+  enchants:
+    unbreaking: 1
+sound:
+  enabled: true
+  type: 'ENTITY_ARROW_SHOOT'
+particles:
+  enabled: true
+  type: 'CRIT'
+titles:
+  damager:
+    enabled: true
+    title: "<gold>Marchewkowa kusza"
+    subtitle: "<white>Postrzeliłeś gracza"
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+  victim:
+    enabled: true
+    title: "<gold>Marchewkowa kusza"
+    subtitle: "<white>Gracz <white>postrzelił cię kuszą!"
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+abilities:
+  'RIGHT_CLICK_ARROW':
+    settings:
+      projectile: ARROW
+      speed: 2.5
+      auto-load: true
+      require-player-hit: true
+    action:
+      - type: PULL_TO_ATTACKER
+        power: 1.8
+        vertical-boost: 0.4

@@ -1,0 +1,52 @@
+id: 'kostka_rubika'
+settings:
+  chance: 1.0
+  cooldown: 0
+  visual: true
+  cooldownmessage: false
+  block-in-region: true
+item:
+  material: COMPARATOR
+  name: '&e&lKostka rubika'
+  lore:
+    - '&8» &7Kostka rubika była do zdobycia'
+    - '&8» &7w &f2024 roku &7podczas &adnia dziecka'
+    - ''
+    - '&8» &7Uderz gracza, aby jego ekwipunek'
+    - '&8» &7został &fprzemieszany!'
+    - ''
+  model-data: 0
+  usage: 1
+  unbreakable: false
+  glow: true
+  attributes:
+    - type: GENERIC_ATTACK_DAMAGE
+      amount: 1.0
+      slot: HAND
+  enchants:
+    unbreaking: 1
+sound:
+  enabled: true
+  type: 'BLOCK_NOTE_BLOCK_PLING'
+particles:
+  enabled: true
+  type: 'VILLAGER_HAPPY'
+titles:
+  damager:
+    enabled: true
+    title: "<yellow><bold>Kostka rubika"
+    subtitle: "<white>Przemieszałeś ekwipunek gracza!"
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+  victim:
+    enabled: true
+    title: "<yellow><bold>Kostka rubika"
+    subtitle: "<white>Gracz <white>przemieszał ci pasek!"
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+abilities:
+  'HIT_ENTITY':
+    action:
+      - type: HOTBAR_SHUFFLE

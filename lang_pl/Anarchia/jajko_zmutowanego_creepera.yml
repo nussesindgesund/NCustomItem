@@ -1,0 +1,58 @@
+id: 'jajko_zmutowanego_creepera'
+settings:
+  chance: 1.0
+  cooldown: 0
+  visual: true
+  cooldownmessage: false
+  block-in-region: true
+item:
+  material: SPIDER_EYE
+  name: '&a&lJajko zmutowanego creepera'
+  lore:
+    - '&8» &7Jest to przedmiot zdobyty podczas:'
+    - '&8» &fspecjalnego wydarzenia marcowego 2025&7!'
+    - ''
+    - '&8» &7Prawym kliknięciem w jajko przywołujesz'
+    - '&8» &fpotężnego &7creepera, który po &cwybuchu'
+    - '&8» &7zadaje &eogromne &7obrażenia.'
+  model-data: 10145
+  usage: 1
+  unbreakable: true
+  glow: true
+  attributes:
+    - type: GENERIC_ATTACK_DAMAGE
+      amount: 1.0
+      slot: HAND
+  enchants:
+    unbreaking: 1
+sound:
+  enabled: true
+  type: 'ENTITY_CREEPER_PRIMED'
+particles:
+  enabled: true
+  type: 'EXPLOSION_NORMAL'
+titles:
+  damager:
+    enabled: true
+    title: ""
+    subtitle: "<green>Postawiono <dark_green>Zmutowanego Creepera!"
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+  victim:
+    enabled: false
+    title: ""
+    subtitle: ""
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+abilities:
+  'RIGHT_CLICK':
+    action:
+      - type: SUMMON_CREEPER
+        power: 8
+        charged: true
+        auto-detonate-seconds: 3
+        spawn-offset: 3.0
+        display-name: "<dark_red><bold>Zmutowany Creeper"
+        show-name: true

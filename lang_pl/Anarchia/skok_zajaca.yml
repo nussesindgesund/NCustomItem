@@ -1,0 +1,52 @@
+id: 'skok_zajaca'
+settings:
+  chance: 1.0
+  cooldown: 5
+  visual: true
+  cooldownmessage: true
+  block-in-region: true
+item:
+  material: RABBIT_FOOT
+  name: "<#55FF55><bold>ꜱᴋᴏᴋ ᴢᴀᴊąᴄᴀ</bold>"
+  lore:
+    - ' <#444444>· <#CCCCCC>Wybija cię wysoko <#55FF55>w powietrze<#CCCCCC>.'
+    - ' <#444444>· <#777777>ᴄᴏᴏʟᴅᴏᴡɴ <#444444>· <#CCCCCC>Odczekaj <#FFFFFF>5 sekund<#CCCCCC>, aby użyć ponownie.'
+    - ' <#444444>· <#777777>ᴜżʏᴄɪᴇ <#444444>· <#CCCCCC>Kliknij <#FFFFFF>PPM<#CCCCCC>, aby skoczyć.'
+  model-data: 0
+  usage: -1
+  unbreakable: true
+  glow: true
+  attributes:
+    - type: GENERIC_ATTACK_DAMAGE
+      amount: 1.0
+      slot: HAND
+  enchants:
+    unbreaking: 1
+sound:
+  enabled: true
+  type: 'ENTITY_RABBIT_JUMP'
+particles:
+  enabled: true
+  type: 'CLOUD'
+titles:
+  damager:
+    enabled: true
+    title: "<#55FF55><bold>ꜱᴋᴏᴋ ᴢᴀᴊąᴄᴀ</bold>"
+    subtitle: "<#444444>· <#AAAAAA>Zostałeś wystrzelony w górę <#444444>·"
+    fadeIn: 5
+    stay: 30
+    fadeOut: 10
+  victim:
+    enabled: false
+    title: ""
+    subtitle: ""
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+abilities:
+  'RIGHT_CLICK':
+    action:
+      - type: RABBIT_JUMP
+        target: ATTACKER
+        vertical-power: 1.2
+        horizontal-power: 0.4

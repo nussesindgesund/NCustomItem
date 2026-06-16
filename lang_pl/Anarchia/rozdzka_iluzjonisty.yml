@@ -1,0 +1,62 @@
+id: 'rozdzka_iluzjonisty'
+settings:
+  chance: 1.0
+  cooldown: 45
+  visual: true
+  cooldownmessage: true
+  block-in-region: true
+item:
+  material: BLAZE_ROD
+  name: '&5&lRóżdżka Iluzjonisty'
+  lore:
+    - '&8» &7Jest to przedmiot zdobyty podczas'
+    - '&8» &fwydarzenia cyrkowego 2025&7!'
+    - ''
+    - '&8» &7LPM: przywołuje &dSzczęki Evokera'
+    - '&8» &7atakujące przeciwników na wprost.'
+    - ''
+    - '&8» &7PPM &dznikasz &7na &e4s &7i tworzysz'
+    - '&8» &dklona &7biegnącego do przodu.'
+  model-data: 10120
+  usage: 1
+  unbreakable: true
+  glow: true
+  attributes:
+    - type: GENERIC_ATTACK_DAMAGE
+      amount: 1.0
+      slot: HAND
+  enchants:
+    unbreaking: 1
+sound:
+  enabled: true
+  type: 'ENTITY_EVOKER_CAST_SPELL'
+particles:
+  enabled: true
+  type: 'SPELL_WITCH'
+titles:
+  damager:
+    enabled: true
+    title: ""
+    subtitle: "<green>Szczęki Evokera <gray>zostały <green>aktywowane<gray>!"
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+  victim:
+    enabled: false
+    title: ""
+    subtitle: ""
+    fadeIn: 10
+    stay: 40
+    fadeOut: 10
+abilities:
+  'LEFT_CLICK':
+    action:
+      - type: EVOKER_FANGS_LINE
+        length: 10
+        delay: 2
+        step: 1.5
+  'RIGHT_CLICK':
+    action:
+      - type: INVISIBLE_CLONE
+        duration: 4
+        speed: 0.6
